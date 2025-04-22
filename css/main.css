@@ -7,6 +7,7 @@
   --link-color: #A033FF;
   --link-color-hover: #8300F5;
 
+  --background-color: #1F1F1F;
   --header-footer-bg-color: #141414;
   --aside-accent-color: #8300F5;
 
@@ -148,7 +149,7 @@ section {
 }
 
 .page-content {
-  background-color: #1F1F1F;
+  background-color: var(--background-color);
 }
 
 .page-content .container {
