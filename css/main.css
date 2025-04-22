@@ -1,12 +1,24 @@
 :root {
-  --link-color: #0077cc;
-  --link-color-hover: #00487c;
-  --header-footer-bg-color: #f0f0f0;
-  --aside-accent-color: #9d836b;
-  --skill-bar-fill-color: #f3e4c6;
-  --blockquote-bg-color: #f7fafc;
+  --font-color: #F5F5F5;
+  --font-color-second: #D6D6D6;
+  --font-color-third: #CCCCCC;
+  --font-color-fourth: #767676;
+
+  --link-color: #A033FF;
+  --link-color-hover: #8300F5;
+
+  --header-footer-bg-color: #141414;
+  --aside-accent-color: #8300F5;
+
+  --skill-bar-background: #f5f5f5;
+  --skill-bar-font: #141414;
+  --skill-bar-fill-color: #B35CFF;
+  --skill-bar-border: #8300F5;
+
+  --blockquote-bg-color: #fcf7f7;
   --blockquote-accent-color: #4a5568;
   --blockquote-text-color: #4a5568;
+
   --spacing-inline: 0.5rem;
 }
 
@@ -26,6 +38,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--font-color);
   margin: 0;
   font-family: "Montserrat", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -66,11 +79,12 @@ h6 {
 }
 
 p {
+  color: var(--font-color-third);
   margin: 0.75rem 0;
 }
 
 a {
-  color: var(--link-color) !important;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -85,6 +99,7 @@ address {
 
 figure,
 ul {
+  color: var(--font-color-third);
   margin: 0;
   padding: 0;
 }
@@ -132,6 +147,10 @@ section {
   margin: 0 auto;
 }
 
+.page-content {
+  background-color: #1F1F1F;
+}
+
 .page-content .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -176,12 +195,13 @@ section {
 
 .header-label {
   font-size: 1.3rem;
-  color: #444;
+  color: var(--font-color-second);
   margin-top: 0.2rem;
   margin-bottom: 0.8rem;
 }
 
 .header-summary {
+  color: var(--font-color-third);
   margin: 1.25rem 0;
 }
 
@@ -219,7 +239,7 @@ aside .section-heading::after {
 
 .section-label {
   font-size: 0.9rem;
-  color: #444;
+  color: var(--font-color-second);
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
 }
@@ -247,7 +267,7 @@ img {
 
 figcaption {
   text-align: center;
-  color: #666;
+  color: var(--font-color-fourth);
   font-size: 0.9rem;
   margin-top: 0.5rem;
   font-style: italic;
@@ -277,6 +297,7 @@ aside li {
 }
 
 .inline-list li {
+  color: var(--font-color-second);
   display: flex; /* This is for HTML Whitespace Issues */
 }
 
@@ -286,8 +307,8 @@ aside li {
   height: 1.5rem;
   margin-top: 0.25rem;
   margin-bottom: 1rem;
-  background: #eee;
-  border: 1px solid #848484;
+  background: var(--skill-bar-background);
+  border: 1px solid var(--skill-bar-border);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -295,7 +316,7 @@ aside li {
 .skill-bar-fill {
   height: 100%;
   background: var(--skill-bar-fill-color) !important;
-  border-right: 1px solid #848484;
+  border-right: 1px solid var(--skill-bar-border);
   border-radius: 2px;
   display: flex;
   align-items: center;
@@ -303,9 +324,34 @@ aside li {
 }
 
 .skill-bar-label {
-  color: #333;
+  color: var(--skill-bar-font);
   font-size: 0.9rem;
   white-space: nowrap;
+}
+
+.soft-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.soft-skill-tag {
+  display: inline-block;
+  background-color: var(--skill-bar-fill-color);
+  color: var(--skill-bar-font);
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--skill-bar-border);
+  white-space: nowrap;
+}
+
+.soft-skill-tag:hover {
+  background-color: var(--link-color-hover);
+  color: var(--font-color);
+  cursor: default;
 }
 
 .w-0 {
