@@ -4,23 +4,29 @@
   --font-color-third: #CCCCCC;
   --font-color-fourth: #767676;
 
-  --link-color: #A033FF;
-  --link-color-hover: #8300F5;
+  --link-color: #B35CFF;
+  --link-color-hover: #941AFF;
 
   --background-color: #1F1F1F;
   --header-footer-bg-color: #141414;
-  --aside-accent-color: #8300F5;
+  --aside-accent-color: #941AFF;
 
   --skill-bar-background: #f5f5f5;
   --skill-bar-font: #141414;
   --skill-bar-fill-color: #B35CFF;
-  --skill-bar-border: #8300F5;
+  --skill-bar-border: #941AFF;
 
   --blockquote-bg-color: #fcf7f7;
   --blockquote-accent-color: #4a5568;
   --blockquote-text-color: #4a5568;
 
   --spacing-inline: 0.5rem;
+}
+
+.light-mode {
+  --font-color: #333;
+  --header-footer-bg-color: #f0f0f0;
+  /* Update other variables... */
 }
 
 /* Base Styles */
