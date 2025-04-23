@@ -518,6 +518,14 @@ blockquote {
     print-color-adjust: exact !important;
   }
 
+  a[href]::after {
+    content: none !important;
+  }
+
+  a.keep-url::after {
+    content: " (" attr(href) ")" !important;
+  }
+
   img, video, .gallery, figure {
     display: none !important;
   }
