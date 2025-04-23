@@ -310,7 +310,7 @@ aside li {
   margin-bottom: 1rem;
   background: var(--skill-bar-background);
   border: 1px solid var(--skill-bar-border);
-  border-radius: 2px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -318,7 +318,7 @@ aside li {
   height: 100%;
   background: var(--skill-bar-fill-color) !important;
   border-right: 1px solid var(--skill-bar-border);
-  border-radius: 2px;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   padding-left: 0.5rem;
@@ -516,5 +516,20 @@ blockquote {
   body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+
+  img, video, .gallery, figure {
+    display: none !important;
+  }
+
+  .unstyled-list > li {
+    width: 48% !important;
+    display: inline-block !important;
+    vertical-align: top;
+    margin-bottom: 0.5rem;
+  }
+
+  .unstyled-list {
+    page-break-inside: avoid;
   }
 }
