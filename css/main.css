@@ -19,6 +19,38 @@
   --spacing-inline: 0.5rem;
 }
 
+.expanding-shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50vw; /* Initial width */
+  height: 50vw; /* Initial height */
+  background-color: #333333; /* Color of the shape */
+  border-radius: 50%; /* Make it a circle */
+  transform: translate(-50%, -50%) scale(0); /* Center the shape */
+  animation: expandFade 20s ease-in-out infinite; /* Animation properties */
+  pointer-events: none; /* Ignore mouse events */
+}
+
+.expanding-shape:nth-of-type(2) {
+  animation-delay: 2s
+}
+.expanding-shape:nth-of-type(3) {
+  animation-delay: 5s
+}
+
+@keyframes expandFade {
+  0% {
+    transform: translate(-50%, -50%) scale(1); /* Start at original size */
+    opacity: 0.1; /* Fully visible */
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(4); /* Expand to cover the screen */
+    opacity: 0; /* Fade out */
+  }
+}
+
 /* 
   NAVIGATION
 */
@@ -31,7 +63,6 @@ section {
 .navbar {
   background-color: var(--header-footer-bg-color);
   padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
@@ -47,15 +78,18 @@ section {
   margin: 0;
 }
 
-.nav-list a {
-  color: var(--link-color);
-  text-decoration: none;
+.nav-list h2 {
+  color: var(--font-color);
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.4rem;
   font-weight: 500;
-  transition: color 0.3s;
+  text-transform: uppercase;
 }
 
 .nav-list a:hover {
   color: var(--link-color-hover);
+  transition: transform 0.3s;
 }
 
 /* 
@@ -85,16 +119,25 @@ section {
   background-color: var(--background-color);
 }
 
+.wrapper {
+  font-family: "Nunito", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
+  sans-serif;
+  font-weight: 400;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+	width: 100%;
+  position: fixed;
+  z-index: -2;
+  overflow-y: scroll;
+}
+
 /* 
 BASE STYLES
 */
 body {
-  font-family: "Nunito", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
-  font-weight: 400;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -151,6 +194,7 @@ a {
 a:hover {
   color: var(--link-color-hover);
   text-decoration: underline;
+  transition: transform 0.3s;
 }
 
 address {
@@ -181,6 +225,29 @@ aside {
 
 footer {
   text-align: center;
+}
+
+/*
+  #FOOTER#
+*/
+
+.footer-logos {
+  display: flex;
+  justify-content: center; /* Center the logos */
+  gap: 1rem; /* Space between logos */
+  margin-top: 1rem; /* Space above the logos */
+}
+
+.footer-logo {
+  width: 40px; /* Set a width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  fill: var(--link-color); /* Change the color here */
+  transition: transform 0.4s; /* Add a hover effect */  
+}
+
+.footer-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  fill: var(--link-color-hover); /* Change color on hover */
 }
 
 /* Utility */
@@ -397,6 +464,7 @@ aside li {
   background-color: var(--link-color-hover);
   color: var(--font-color);
   cursor: default;
+  transition: transform 0.3s;
 }
 
 .w-0 {
@@ -450,19 +518,6 @@ aside li {
 .w-100 {
   width: 100%;
   border-right: none;
-}
-
-/* Blockquotes */
-blockquote {
-  margin: 1rem 2rem;
-  padding: 1.5rem 2rem;
-  background-color: var(--blockquote-bg-color);
-  border-left: 4px solid var(--blockquote-accent-color);
-  font-style: italic;
-  color: var(--blockquote-text-color);
-  line-height: 1.6;
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 37.5rem) {
@@ -576,5 +631,9 @@ blockquote {
 
   .unstyled-list {
     page-break-inside: avoid;
+  }
+
+  .page-footer {
+    display: none;
   }
 }
