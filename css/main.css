@@ -16,20 +16,78 @@
   --skill-bar-fill-color: #B35CFF;
   --skill-bar-border: #941AFF;
 
-  --blockquote-bg-color: #fcf7f7;
-  --blockquote-accent-color: #4a5568;
-  --blockquote-text-color: #4a5568;
-
   --spacing-inline: 0.5rem;
 }
 
-.light-mode {
-  --font-color: #333;
-  --header-footer-bg-color: #f0f0f0;
-  /* Update other variables... */
+/* 
+  NAVIGATION
+*/
+
+section {
+  display: none; /* Hide all sections by default */
+  background: var(--background-color);
 }
 
-/* Base Styles */
+.navbar {
+  background-color: var(--header-footer-bg-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  gap: 2rem; /* Space between items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-list a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: var(--link-color-hover);
+}
+
+/* 
+  HOME
+*/
+
+/* 
+  INFO
+*/
+
+.info-top {
+  background-color: var(--background-color);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  gap: 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.info-label {
+  font-size: 1.3rem;
+  color: var(--font-color-second);
+  margin-top: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.info {
+  background-color: var(--background-color);
+}
+
+/* 
+BASE STYLES
+*/
 body {
   font-family: "Nunito", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
@@ -39,12 +97,7 @@ body {
   min-height: 100vh;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--font-color);
   margin: 0;
   font-family: "Montserrat", "Segoe UI", "Helvetica Neue", Helvetica, Arial,
@@ -130,10 +183,6 @@ footer {
   text-align: center;
 }
 
-section {
-  margin-bottom: 1.5rem;
-}
-
 /* Utility */
 .block {
   display: block;
@@ -190,21 +239,10 @@ section {
   border: 1px solid #999;
 }
 
-.header-info ul {
-  margin: 1rem 0;
-}
-
 .link-with-icon {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-}
-
-.header-label {
-  font-size: 1.3rem;
-  color: var(--font-color-second);
-  margin-top: 0.2rem;
-  margin-bottom: 0.8rem;
 }
 
 .header-summary {
@@ -467,10 +505,6 @@ blockquote {
     font-size: 1rem;
   }
 
-  header {
-    padding-bottom: 1.5rem;
-  }
-
   .flex-responsive {
     flex-direction: row;
     align-items: flex-start;
@@ -481,16 +515,8 @@ blockquote {
     grid-template-columns: 2fr 1fr;
   }
 
-  .header-top {
-    gap: 2rem;
-  }
-
   .header-image {
     max-width: 192px;
-  }
-
-  .header-info {
-    margin-top: 0.5rem;
   }
 
   .page-header ul {
@@ -513,6 +539,11 @@ blockquote {
 }
 
 @media print {
+
+  .page-header {
+    display: none;
+  }
+
   .skill-bar-label {
     background: transparent !important;
     background-color: transparent !important;

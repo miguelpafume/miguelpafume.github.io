@@ -53,11 +53,32 @@
 
 <body>
     <header class="page-header">
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#resume">Currículo</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="page-content">
+            <div class="container">
+                <h1>WIP</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
         <div class="container">
-            <div class="header-top flex-responsive">
-                <div class="header-info">
+            <div class="info-top flex-responsive">
+                <div class="info">
                     <h1>Miguel Pafume Rodrigues</h1>
-                    <h2 class="header-label">Programador C++ & C# e Desenvolvedor de Jogos</h2>
+                    <h2 class="info-label">Programador C++ & C# e Desenvolvedor de Jogos</h2>
 
                     <address>
                         <ul class="inline-list flex-responsive">
@@ -99,237 +120,263 @@
 
                     </ul>
 
-                    <p class="header-summary">Desenvolvedor em formação em Engenharia de Software com foco em desenvolvimento de sistemas e jogos. Apaixonado por resolver problemas e criar soluções. Sempre buscando me desafiar, aprender e evoluir como programador.</p>
+                    <p class="info-summary">Desenvolvedor em formação em Engenharia de Software com foco em desenvolvimento de sistemas e jogos. Apaixonado por resolver problemas e criar soluções. Sempre buscando me desafiar, aprender e evoluir como programador.</p>
                 </div>
             </div>
         </div>
-    </header>
 
-    <div class="page-content">
-        <div class="container">
-            <main>
-                <section>
-                    <h2 class="section-heading">Formações Acadêmicas</h2>
-                    <h3>Bacharelado em Engenharia de Software</h3>
-                    <p class="section-label">Atualmente Cursando - Joinville, SC</p>
-
-                    <a href="https://www.unisociesc.com.br" target="_blank">UNISOCIESC</a>
-
-                    <p>
-                        <ul>
-                            <li>GPA: 3,7 / 4,0</li>
-                            <li>Média: 92,5 / 100</li>
-                            <li>&lpar;Notas de acordo com 1/2025&rpar;</li>
-                        </ul>
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="section-heading">Experiências Profissionais</h2>
-
-                    <section>
-                        <h3>
-                            Assistente de Professor de Inglês - Up To You</a>
-                        </h3>
-
-                        <p class="section-label">01/2018 - 12/2018</p>
-
-                        <p>Auxiliava a professora de inglês em aulas, praticando conversação com alunos, corrigindo atividades e apoiando no desenvolvimento das lições.</p>
-
-                        <ul>
-                            <li>Auxiliava alunos em diálogos em inglês</li>
-                            <li>Revisão de exercícios escritos e orais</li>
-                            <li>Acompanhamento individualizado para alunos com dificuldades</li>
-                        </ul>
-
-                    </section>
-
-                    <section>
-                        <h3>
-
-                            Tradutor - Freelancer</a>
-
-                        </h3>
-
-                        <p class="section-label">07/2019 - 12/2019</p>
-
-                        <p>Participei da tradução colaborativa de um livro de artes (inglês para português), trabalhando em equipe para manter a fidelidade ao conteúdo original enquanto adaptava termos técnicos.</p>
-
-                        <ul>
-                            <li>Trabalhei em parceria com outro tradutor</li>
-                            <li>Organizei meu fluxo de trabalho para entregar dentro do cronograma</li>
-                            <li>Assegurei que termos específicos fossem adaptados corretamente</li>
-                        </ul>
-                    </section>
-                </section>
-
-                <section>
-                    <h2 class="section-heading">Projetos</h2>
-
-                    <section>
-                        <h3>
-                            <a href="https://github.com/miguelpafume/PongGL" target="_blank"> PongGL</a>
-                        </h3>
-
-                        <p>Recriação do clássico Pong usando C++ e OpenGL, focada em entender os fundamentos de renderização gráfica e game loops. </p>
-
-                        <ul>
-                            <li>Renderização gráfica e implementando de elementos visuais 2D usando OpenGL</li>
-                            <li>Lógica de jogo desenvolvendo física básica</li>
-                            <li>Estruturação modular do projeto para facilitar manutenção e expansão</li>
-                        </ul>
-
-                        <div class="gallery main-gallery">
-                            <figure>
-                                <img src="img/projects/pong1.png"
-                                    alt="Base game">
-                                <figcaption>Jogo base</figcaption>
-                            </figure>
+        <div class="page-content">
+            <div class="container">
+                <main>
+                    <div>
+                        <h2 class="section-heading">Formações Acadêmicas</h2>
+                        <h3>Bacharelado em Engenharia de Software</h3>
+                        <p class="section-label">Atualmente Cursando - Joinville, SC</p>
+    
+                        <a href="https://www.unisociesc.com.br" target="_blank">UNISOCIESC</a>
+    
+                        <p>
+                            <ul>
+                                <li>GPA: 3,7 / 4,0</li>
+                                <li>Média: 92,5 / 100</li>
+                                <li>&lpar;Notas de acordo com 1/2025&rpar;</li>
+                            </ul>
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h2 class="section-heading">Experiências Profissionais</h2>
+    
+                        <div>
+                            <h3>
+                                Assistente de Professor de Inglês - Up To You</a>
+                            </h3>
+    
+                            <p class="section-label">01/2018 - 12/2018</p>
+    
+                            <p>Auxiliava a professora de inglês em aulas, praticando conversação com alunos, corrigindo atividades e apoiando no desenvolvimento das lições.</p>
+    
+                            <ul>
+                                <li>Auxiliava alunos em diálogos em inglês</li>
+                                <li>Revisão de exercícios escritos e orais</li>
+                                <li>Acompanhamento individualizado para alunos com dificuldades</li>
+                            </ul>
+    
                         </div>
-                    </section>
-                </section>
-            </main>
-
-            <!-- Sidebar Section -->
-            <aside>
-                <section>
-                    <h2 class="section-heading">Habilidades Técnicas</h2>
-                    <ul class="unstyled-list">
-
-                        <li>
-                            <h3>C++</h3>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill w-80" role="meter" aria-valuenow=80" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                    <span class="skill-bar-label">Avançado</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <h3>C# & LUA</h3>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill w-60" role="meter" aria-valuenow="60" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                    <span class="skill-bar-label">Intermediário</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <h3>Informática & Pacote Office</h3>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill w-50" role="meter" aria-valuenow="50" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                    <span class="skill-bar-label">Intermediário</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        
-                        <li>
-                            <h3>Adobe Photoshop/Premiere</h3>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill w-50" role="meter" aria-valuenow="50" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                    <span class="skill-bar-label">Intermediário</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <h3>Pixel Art</h3>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill w-30" role="meter" aria-valuenow="30" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                    <span class="skill-bar-label">Básico</span>
-                                </div>
-                            </div>
-                        </li>
-
-
-                        <li>
-                            <h3>Python</h3>
-                            <div class="skill-bar">
-                                <div class="skill-bar-fill w-20" role="meter" aria-valuenow="20" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                    <span class="skill-bar-label">Básico</span>
-                                </div>
-                            </div>
-                        </li>
-
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="section-heading">Soft Skills</h2>
-                    <ul class="unstyled-list">
-                        <div class="soft-skills-container">
-                            <span class="soft-skill-tag">Trabalho em Equipe</span>
-                            <span class="soft-skill-tag">Criatividade</span>
-                            <span class="soft-skill-tag">Adaptabilidade</span>
-                            <span class="soft-skill-tag">Gestão de Tempo</span>
-                            <span class="soft-skill-tag">Pensamento Crítico</span>
+    
+                        <div>
+                            <h3>
+    
+                                Tradutor - Freelancer</a>
+    
+                            </h3>
+    
+                            <p class="section-label">07/2019 - 12/2019</p>
+    
+                            <p>Participei da tradução colaborativa de um livro de artes (inglês para português), trabalhando em equipe para manter a fidelidade ao conteúdo original enquanto adaptava termos técnicos.</p>
+    
+                            <ul>
+                                <li>Trabalhei em parceria com outro tradutor</li>
+                                <li>Organizei meu fluxo de trabalho para entregar dentro do cronograma</li>
+                                <li>Assegurei que termos específicos fossem adaptados corretamente</li>
+                            </ul>
                         </div>
-                </section>
-
-                <section>
-                    <h2 class="section-heading">Idiomas</h2>
-                    <ul class="unstyled-list">
-
-                        <li>
-                            <h3>Português</h3>
-                            <p class="section-label">Nativo</p>
-                        </li>
-
-                        <li>
-                            <h3>Inglês</h3>
-                            <p class="section-label">Proficiente - C2 CEFR</p>
-                        </li>
-
-                        <li>
-                            <h3>Russo</h3>
-                            <p class="section-label">Iniciante - A1 CEFR</p>
-                        </li>
-
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="section-heading">Interesses</h2>
-
-                    <section>
-                        <h3>Idiomas</h3>
-
-                        <p>Adoro aprender idiomas no meu tempo livre. Cada língua nova é uma porta para culturas - e conteúdos - diferentes.</p>
-
-                        <div class="gallery side-gallery">
-                            <figure>
-                                <img src="img/interests/interest1.png"
-                                    alt="&quot;Olá&quot; escrito em diferentes idiomas.">
-                                <figcaption>Atualmente estudo um pouco de Russo e Japonês.</figcaption>
-                            </figure>
+                    </div>
+    
+                    <div id="personal-projects">
+                        <h2 class="section-heading">Projetos</h2>
+    
+                        <div>
+                            <h3>
+                                <a href="https://github.com/miguelpafume/PongGL" target="_blank"> PongGL</a>
+                            </h3>
+    
+                            <p>Recriação do clássico Pong usando C++ e OpenGL, focada em entender os fundamentos de renderização gráfica e game loops. </p>
+    
+                            <ul>
+                                <li>Renderização gráfica e implementando de elementos visuais 2D usando OpenGL</li>
+                                <li>Lógica de jogo desenvolvendo física básica</li>
+                                <li>Estruturação modular do projeto para facilitar manutenção e expansão</li>
+                            </ul>
+    
+                            <div class="gallery main-gallery">
+                                <figure>
+                                    <img src="img/projects/pong1.png"
+                                        alt="Base game">
+                                    <figcaption>Jogo base</figcaption>
+                                </figure>
+                            </div>
                         </div>
-
-                    </section>
-
-                    <section>
-                        <h3>RPG de Mesa</h3>
-
-                        <p>Mestre apaixonado por criar histórias e worldbuilding. Atualmente desenvolvendo 2 cenários próprios.</p>
-
-                        <div class="gallery side-gallery">
-                            <figure>
-                                <img src="img/interests/interest2.jpg"
-                                    alt="Diferentes dados e um lápis sobre uma ficha de rpg">
-                                <figcaption>TFTL e Kult são meus sistemas favoritos.</figcaption>
-                            </figure>
+                    </div>
+                </main>
+    
+                <!-- Sidebar Section -->
+                <aside>
+                    <div>
+                        <h2 class="section-heading">Habilidades Técnicas</h2>
+                        <ul class="unstyled-list">
+    
+                            <li>
+                                <h3>C++</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-80" role="meter" aria-valuenow=80" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Avançado</span>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li>
+                                <h3>C# & LUA</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-60" role="meter" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Intermediário</span>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li>
+                                <h3>Informática & Pacote Office</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-50" role="meter" aria-valuenow="50" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Intermediário</span>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            
+                            <li>
+                                <h3>Adobe Photoshop/Premiere</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-50" role="meter" aria-valuenow="50" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Intermediário</span>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <h3>Git</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-40" role="meter" aria-valuenow="40" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Básico</span>
+                                    </div>
+                                </div>
+                            </li>
+    
+                            <li>
+                                <h3>Pixel Art</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-30" role="meter" aria-valuenow="30" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Básico</span>
+                                    </div>
+                                </div>
+                            </li>
+    
+    
+                            <li>
+                                <h3>Python</h3>
+                                <div class="skill-bar">
+                                    <div class="skill-bar-fill w-20" role="meter" aria-valuenow="20" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <span class="skill-bar-label">Básico</span>
+                                    </div>
+                                </div>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <h2 class="section-heading">Soft Skills</h2>
+                        <ul class="unstyled-list">
+                            <div class="soft-skills-container">
+                                <span class="soft-skill-tag">Trabalho em Equipe</span>
+                                <span class="soft-skill-tag">Criatividade</span>
+                                <span class="soft-skill-tag">Adaptabilidade</span>
+                                <span class="soft-skill-tag">Gestão de Tempo</span>
+                                <span class="soft-skill-tag">Pensamento Crítico</span>
+                            </div>
+                    </div>
+    
+                    <div>
+                        <h2 class="section-heading">Idiomas</h2>
+                        <ul class="unstyled-list">
+    
+                            <li>
+                                <h3>Português</h3>
+                                <p class="section-label">Nativo</p>
+                            </li>
+    
+                            <li>
+                                <h3>Inglês</h3>
+                                <p class="section-label">Proficiente - C2 CEFR</p>
+                            </li>
+    
+                            <li>
+                                <h3>Russo</h3>
+                                <p class="section-label">Iniciante - A1 CEFR</p>
+                            </li>
+    
+                        </ul>
+                    </div>
+    
+                    <div>
+                        <h2 class="section-heading">Interesses</h2>
+    
+                        <div>
+                            <h3>Idiomas</h3>
+    
+                            <p>Adoro aprender idiomas no meu tempo livre. Cada língua nova é uma porta para culturas - e conteúdos - diferentes.</p>
+    
+                            <div class="gallery side-gallery">
+                                <figure>
+                                    <img src="img/interests/interest1.png"
+                                        alt="&quot;Olá&quot; escrito em diferentes idiomas.">
+                                    <figcaption>Atualmente estudo um pouco de Russo e Japonês</figcaption>
+                                </figure>
+                            </div>
+    
                         </div>
-                    </section>
-                </section>
-            </aside>
+    
+                        <div>
+                            <h3>RPG de Mesa</h3>
+    
+                            <p>Mestre apaixonado por criar histórias e worldbuilding. Atualmente desenvolvendo 2 cenários próprios</p>
+    
+                            <div class="gallery side-gallery">
+                                <figure>
+                                    <img src="img/interests/interest2.jpg"
+                                        alt="Diferentes dados e um lápis sobre uma ficha de rpg">
+                                    <figcaption>TFTL e Kult são meus sistemas favoritos.</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="projects">
+        <div class="page-content">
+            <div class="container">
+                <h1>WIP</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="page-content">
+            <div class="container">
+                <h1>WIP</h1>
+            </div>
+        </div>
+    </section>
 
     <footer class="page-footer">
         <div class="container">
