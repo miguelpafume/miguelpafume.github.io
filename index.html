@@ -32,8 +32,7 @@
     <link rel="stylesheet" href="css/main.css">
 
     <!-- Favicon for all browsers -->
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/svg+xml" href="icon.png">
 
     <!-- Apple touch icon for iOS devices -->
     <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
@@ -55,18 +54,105 @@
                         <li><a href="#home"><h2>Home</h2></a></li>
                         <li><a href="#resume"><h2>Currículo</h2></a></li>
                         <li><a href="#projects"><h2>Projetos</h2></a></li>
-                        <li><a href="#contact"><h2>Contato</h2></a></li>
+                    </ul>
+                    <ul class="nav-list">
+                    <button id="download-btn">
+                        <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 14.25C3.41421 14.25 3.75 14.5858 3.75 15C3.75 16.4354 3.75159 17.4365 3.85315 18.1919C3.9518 18.9257 4.13225 19.3142 4.40901 19.591C4.68577 19.8678 5.07435 20.0482 5.80812 20.1469C6.56347 20.2484 7.56459 20.25 9 20.25H15C16.4354 20.25 17.4365 20.2484 18.1919 20.1469C18.9257 20.0482 19.3142 19.8678 19.591 19.591C19.8678 19.3142 20.0482 18.9257 20.1469 18.1919C20.2484 17.4365 20.25 16.4354 20.25 15C20.25 14.5858 20.5858 14.25 21 14.25C21.4142 14.25 21.75 14.5858 21.75 15V15.0549C21.75 16.4225 21.75 17.5248 21.6335 18.3918C21.5125 19.2919 21.2536 20.0497 20.6517 20.6516C20.0497 21.2536 19.2919 21.5125 18.3918 21.6335C17.5248 21.75 16.4225 21.75 15.0549 21.75H8.94513C7.57754 21.75 6.47522 21.75 5.60825 21.6335C4.70814 21.5125 3.95027 21.2536 3.34835 20.6517C2.74643 20.0497 2.48754 19.2919 2.36652 18.3918C2.24996 17.5248 2.24998 16.4225 2.25 15.0549C2.25 15.0366 2.25 15.0183 2.25 15C2.25 14.5858 2.58579 14.25 3 14.25Z" fill="#1C274C"/>
+                        <path d="M12 16.75C12.2106 16.75 12.4114 16.6615 12.5535 16.5061L16.5535 12.1311C16.833 11.8254 16.8118 11.351 16.5061 11.0715C16.2004 10.792 15.726 10.8132 15.4465 11.1189L12.75 14.0682V3C12.75 2.58579 12.4142 2.25 12 2.25C11.5858 2.25 11.25 2.58579 11.25 3V14.0682L8.55353 11.1189C8.27403 10.8132 7.79963 10.792 7.49393 11.0715C7.18823 11.351 7.16698 11.8254 7.44648 12.1311L11.4465 16.5061C11.5886 16.6615 11.7894 16.75 12 16.75Z" fill="#1C274C"/>
+                        </svg>
+                        <h3>Currículo</h3></button>
                     </ul>
                 </div>
             </nav>
         </header>
 
         <section id="home">
-            <div class="page-content">
-                <div class="container">
-                    <h1>WIP</h1>
+            <div class="container">
+                <div style="padding-top: 1rem;"></div>
+
+                <div class="header-top flex-responsive">
+          
+                    <img    class="header-image"
+                            width="256"
+                            height="256"
+                            src="icon.png"
+                            alt="Miguel Pafume Rodrigues Profile Image" />
+                        
+                    <div class="header-info">
+                        <h1>Miguel Pafume Rodrigue </h1>
+                        <h2 class="header-label">Programador C++ & C# e Desenvolvedor de Jogos</h2>
+                            
+                        <address>
+                            <ul class="inline-list flex-responsive">
+                                <li>Joinville, Santa Catarina, Brasil</li>
+                            </ul>
+                        </address>
+                    </div>
+                </div>
+
+
+                <h1 class="section-heading">Sobre Mim</h1>
+                <h4 class="about-me">
+                    Oi! Eu sou o Miguel 👋<br>
+                    Sou estudante de Engenharia de Software, apaixonado por desenvolvimento de jogos e gráficos computacionais.<br><br>
+                    
+                    Gosto de explorar ideias novas, estudar tecnologias diferentes e transformar curiosidade em código. Nas horas vagas, mestro RPG de mesa, estudo idiomas e converso com meu gato (ele ainda não aprendeu programação, mas estamos trabalhando nisso 🐱).<br><br>
+                    
+                    Atualmente, estou em busca de oportunidades na área de desenvolvimento — especialmente no que envolve jogos, gráficos ou sistemas.
+                </h4>
+
+                <h1 class="section-heading">Tecnologias</h1>
+                <div class="home-skills-section">
+                    <div class="home-skill">
+                        <img src="img/skills/c++_logo.png" alt="C++ Logo">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/csharp_logo.png" alt="C# Logo">
+                        <h3>C#</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/adobephotoshop_logo.png" alt="C# Logo">
+                        <h3>Photoshop</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/adobepremiere_logo.png" alt="C# Logo">
+                        <h3>Premiere</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/aseprite_logo.png" alt="C# Logo">
+                        <h3>Pixel Art</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/git_logo.png" alt="C# Logo">
+                        <h3>Git</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/lua_logo.png" alt="C# Logo">
+                        <h3>Lua</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/opengl_logo.png" alt="C# Logo">
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/vulkan_logo.png" alt="C# Logo">
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/python_logo.webp" alt="C# Logo">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/unity_logo.png" alt="C# Logo">
+                        <h3>Unity</h3>
+                    </div>
+                    <div class="home-skill">
+                        <img src="img/skills/unrealengine_logo.png" alt="C# Logo">
+                        <h3>Unreal Engine</h3>
+                    </div>
                 </div>
             </div>
+            <div style="padding-top: 1rem;"></div>
         </section>
 
         <section id="resume">
@@ -210,80 +296,20 @@
                     <aside>
                         <div>
                             <h2 class="section-heading">Habilidades Técnicas</h2>
+
                             <ul class="unstyled-list">
-        
-                                <li>
-                                    <h3>C++</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-80" role="meter" aria-valuenow=80" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Avançado</span>
-                                        </div>
-                                    </div>
-                                </li>
-        
-                                <li>
-                                    <h3>C# & LUA</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-60" role="meter" aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Intermediário</span>
-                                        </div>
-                                    </div>
-                                </li>
-        
-                                <li>
-                                    <h3>Informática & Pacote Office</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-50" role="meter" aria-valuenow="50" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Intermediário</span>
-                                        </div>
-                                    </div>
-                                </li>
-        
-                                
-                                <li>
-                                    <h3>Adobe Photoshop/Premiere</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-50" role="meter" aria-valuenow="50" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Intermediário</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <li>
-                                    <h3>Git</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-40" role="meter" aria-valuenow="40" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Básico</span>
-                                        </div>
-                                    </div>
-                                </li>
-        
-                                <li>
-                                    <h3>Pixel Art</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-30" role="meter" aria-valuenow="30" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Básico</span>
-                                        </div>
-                                    </div>
-                                </li>
-        
-        
-                                <li>
-                                    <h3>Python</h3>
-                                    <div class="skill-bar">
-                                        <div class="skill-bar-fill w-20" role="meter" aria-valuenow="20" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                            <span class="skill-bar-label">Básico</span>
-                                        </div>
-                                    </div>
-                                </li>
-        
+                                <div class="skills-container">
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">C#</span>
+                                    <span class="skill-tag">Lua</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Pixel Art</span>
+                                    <span class="skill-tag">Informática</span>
+                                    <span class="skill-tag">Pacote Office</span>
+                                    <span class="skill-tag">Adobe Premiere</span>
+                                    <span class="skill-tag">Adobe Photoshop</span>
+                                </div>
                             </ul>
                         </div>
         
@@ -367,14 +393,6 @@
             </div>
         </section>
 
-        <section id="contact">
-            <div class="page-content">
-                <div class="container">
-                    <h1>WIP</h1>
-                </div>
-            </div>
-        </section>
-
         <footer class="page-footer">
             <div class="container">
                 <p>© 2025 Miguel Pafume Rodrigues. All rights reserved.</p>
@@ -403,6 +421,7 @@
         </footer>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 

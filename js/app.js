@@ -1,24 +1,26 @@
-// Function to show the selected section and hide others
 function showSection(sectionId) {
-    // Get all sections
-    const sections = document.querySelectorAll('section'); // Include main divs if needed
+    const sections = document.querySelectorAll('section');
     
-    // Hide all sections
     sections.forEach(section => {
         section.style.display = 'none';
     });
 
-    // Show the selected section
     const selectedSection = document.getElementById(sectionId);
+
     if (selectedSection) {
         selectedSection.style.display = 'block';
+    }
+
+    if (sectionId == 'resume') {
+        document.getElementById('download-btn').style.display = 'inline-flex';
+    } else {
+        document.getElementById('download-btn').style.display = 'none';
     }
 
     // Save the current section in localStorage
     localStorage.setItem('currentSection', sectionId);
 }
 
-// Event listeners for navigation links
 document.querySelectorAll('.nav-list a').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent default anchor behavior
@@ -27,12 +29,37 @@ document.querySelectorAll('.nav-list a').forEach(link => {
     });
 });
 
-// On page load, check if there's a saved section in localStorage
 window.onload = function() {
     const savedSection = localStorage.getItem('currentSection');
     if (savedSection) {
-        showSection(savedSection); // Show the saved section
+        showSection(savedSection);
     } else {
-        showSection('home'); // Default to home if no section is saved
+        showSection('home');
     }
 };
+
+document.getElementById("download-btn").addEventListener("click", () => {
+    fetch("resume.html")
+        .then(response => response.text())
+        .then(html => {
+            const container = document.createElement("div");
+            container.innerHTML = html;
+            container.style.display = "none"; // hide the content
+            document.body.appendChild(container);
+
+            html2pdf()
+                .set({
+                    margin: 0.5,
+                    filename: 'curriculo-miguel.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+                })
+                .from(container)
+                .save()
+                .then(() => document.body.removeChild(container));
+        })
+        .catch(error => {
+            console.error("ERROR:", error);
+        });
+});
