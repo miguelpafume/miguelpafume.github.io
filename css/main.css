@@ -34,6 +34,71 @@ button:hover {
   background: #941AFF;
 }
 
+/*
+  IMAGE ZOOM
+*/
+
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.15s ease-in-out forwards;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* 
   BACKGROUND ANIMATION
 */
@@ -429,10 +494,16 @@ aside .section-heading::after {
   z-index: 2;
 }
 
-/* Images */
+/* 
+  GALLERY
+*/
 img {
   max-width: 100%;
   height: auto;
+}
+
+.gallery img {
+  cursor: zoom-in;
 }
 
 .gallery {

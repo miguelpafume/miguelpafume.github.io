@@ -8,6 +8,7 @@ function showSection(sectionId) {
     const selectedSection = document.getElementById(sectionId);
 
     if (selectedSection) {
+        sessionStorage.setItem('currentSection', sectionId);
         selectedSection.style.display = 'block';
     }
 
@@ -16,9 +17,6 @@ function showSection(sectionId) {
     } else {
         document.getElementById('download-btn').style.display = 'none';
     }
-
-    // Save the current section in localStorage
-    localStorage.setItem('currentSection', sectionId);
 }
 
 document.querySelectorAll('.nav-list a').forEach(link => {
@@ -29,8 +27,8 @@ document.querySelectorAll('.nav-list a').forEach(link => {
     });
 });
 
-window.onload = function() {
-    const savedSection = localStorage.getItem('currentSection');
+window.onload = function () {
+    const savedSection = sessionStorage.getItem('currentSection');
     if (savedSection) {
         showSection(savedSection);
     } else {
@@ -38,28 +36,34 @@ window.onload = function() {
     }
 };
 
-document.getElementById("download-btn").addEventListener("click", () => {
-    fetch("resume.html")
-        .then(response => response.text())
-        .then(html => {
-            const container = document.createElement("div");
-            container.innerHTML = html;
-            container.style.display = "none"; // hide the content
-            document.body.appendChild(container);
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
 
-            html2pdf()
-                .set({
-                    margin: 0.5,
-                    filename: 'curriculo-miguel.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2 },
-                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-                })
-                .from(container)
-                .save()
-                .then(() => document.body.removeChild(container));
-        })
-        .catch(error => {
-            console.error("ERROR:", error);
-        });
+// Handle click outside the image to close
+lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove('fade-in');
+        lightbox.classList.add('fade-out');
+
+        setTimeout(() => {
+            lightbox.classList.remove('active', 'fade-out');
+            lightbox.innerHTML = '';
+        }, 300); // Match this to your CSS animation duration
+    }
+});
+
+// Setup images
+const images = document.querySelectorAll('.gallery img');
+images.forEach(image => {
+    image.style.cursor = 'zoom-in';
+    image.addEventListener('click', () => {
+        const img = document.createElement('img');
+        img.src = image.src;
+
+        lightbox.innerHTML = ''; // Clear previous content
+        lightbox.appendChild(img);
+        lightbox.classList.add('active', 'fade-in');
+        lightbox.classList.remove('fade-out');
+    });
 });
