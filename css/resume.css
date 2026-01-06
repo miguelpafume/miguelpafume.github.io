@@ -21,6 +21,18 @@
   .page-break-margin {
     padding-top: 1cm; 
   }
+
+  h2, h3 {
+    page-break-after: avoid; /* Prevents a heading from being the last thing on a page */
+    break-after: avoid;
+  }
+
+  section {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
 }
 
 html {
@@ -34,8 +46,6 @@ a[href]::after {
 section {
   page-break-inside: avoid;
 }
-
-
 
 header {
   padding: 0.5in;
