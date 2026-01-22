@@ -35,6 +35,19 @@
   }
 }
 
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.github-icon {
+  width: 16px;  /* Adjust size as needed */
+  height: 16px;
+}
+
 html {
   font-size: 11pt;
 }
