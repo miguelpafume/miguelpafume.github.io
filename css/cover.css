@@ -1,0 +1,139 @@
+@page {
+  size: letter;
+}
+
+@media print {
+  /* Remove top margin from first page only */
+  @page {
+    margin: 0;
+  }
+
+  /* Manual page break control */
+  .page-break {
+    page-break-before: always;
+  }
+
+  title {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .page-break-margin {
+    padding-top: 1cm; 
+  }
+
+  h2, h3 {
+    page-break-after: avoid; /* Prevents a heading from being the last thing on a page */
+    break-after: avoid;
+  }
+
+  section {
+    page-break-inside: auto !important;
+    break-inside: auto !important;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.github-icon {
+  width: 16px;  /* Adjust size as needed */
+  height: 16px;
+}
+
+html {
+  font-size: 11pt;
+}
+
+a[href]::after {
+  content: "";
+}
+
+section {
+  page-break-inside: avoid;
+}
+
+header {
+  padding: 0.5in;
+}
+
+header {
+  padding-bottom: 0.5rem;
+}
+
+.header-info {
+  margin-top: 0;
+}
+
+main,
+footer {
+  padding: 2rem;
+}
+
+main {
+  padding-left: 0.5in;
+  padding-bottom: 0.5in;
+}
+
+.page-header,
+.page-footer {
+  background: #fff;
+}
+
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+aside h1 {
+  font-size: 1.4rem;
+}
+
+aside h2 {
+  font-size: 1.1rem;
+}
+
+aside h3 {
+  font-size: 1rem;
+}
+
+aside h4 {
+  font-size: 1rem;
+}
+
+aside h5 {
+  font-size: 1rem;
+}
+
+aside h6 {
+  font-size: 1rem;
+}
+
+.header-top {
+  gap: 2rem;
+}
+
+.page-header ul {
+  margin: 0.5rem 0;
+}
+
+.inline-list {
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--spacing-inline);
+}
+
+.inline-list li:not(:last-child)::after {
+  content: "|";
+  margin-left: var(--spacing-inline);
+  color: #ccc;
+}
