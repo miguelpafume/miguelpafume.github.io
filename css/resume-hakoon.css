@@ -1,16 +1,7 @@
-@page {
-  size: letter;
-}
-
 @media print {
   /* Remove top margin from first page only */
   @page {
     margin: 0;
-  }
-
-  /* Manual page break control */
-  .page-break {
-    page-break-before: always;
   }
 
   title {
@@ -18,26 +9,11 @@
     visibility: hidden !important;
   }
 
-  .page-break-margin {
-    padding-top: 1cm; 
-  }
-
-  h2, h3 {
-    page-break-after: avoid; /* Prevents a heading from being the last thing on a page */
-    break-after: avoid;
-  }
-
   section {
     page-break-inside: auto !important;
     break-inside: auto !important;
     display: block;
-    margin-bottom: 1.5rem;
   }
-}
-
-.github-icon {
-  width: 16px;  /* Adjust size as needed */
-  height: 16px;
 }
 
 html {
@@ -64,20 +40,13 @@ header {
   margin-top: 0;
 }
 
-main,
-aside,
-footer {
-  padding: 2rem;
-}
-
 main {
   padding-left: 0.5in;
-  padding-bottom: 0.5in;
+  padding-top: 0;
 }
 
 aside {
   padding-right: 0.5in;
-  padding-bottom: 0.5in;
 }
 
 .page-header,
@@ -119,14 +88,6 @@ aside h5 {
 
 aside h6 {
   font-size: 1rem;
-}
-
-.header-top {
-  gap: 2rem;
-}
-
-.page-header ul {
-  margin: 0.5rem 0;
 }
 
 .inline-list {

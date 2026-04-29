@@ -8,7 +8,7 @@
   <!-- Site Info -->
   <title>Miguel Pafume Rodrigues - CV</title>
   <meta name="description"
-    content="Miguel Pafume Rodrigues - A short summary of who you are, your background, experience, and interests to give visitors a quick introduction to you.">
+    content="Miguel Pafume Rodrigues - Game and graphics programmer with experience in Unreal Engine 5, C++, Vulkan and C#.">
   <meta name="author" content="Miguel Pafume Rodrigues">
 
   <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
@@ -45,7 +45,7 @@
   <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
 </head>
 
-<body>
+<body class="compact">
   <header class="page-header">
     <div class="container">
       <div class="header-top flex-responsive">
@@ -75,65 +75,115 @@
             </ul>
           </address>
 
-          <p class="header-summary">Game Programmer and Software Engineering student with professional experience in <strong>Unreal Engine 5</strong>. Specialized in <strong>C++</strong> architecture, <strong>Graphics Programming</strong> (OpenGL/Vulkan), and developing custom pipeline tools.</p>
+          <p class="header-summary">Software Engineering student focused on <strong>game and graphics programming</strong>, with professional experience in <strong>Unreal Engine 5</strong>. Most at home in <strong>C++</strong> and the lower-level side of game development &mdash; graphics APIs (<strong>Vulkan</strong>, <strong>OpenGL</strong>), engine internals, and emulation &mdash; building both shipped tools and custom frameworks from scratch.</p>
 
         </div>
       </div>
     </div>
   </header>
 
-  <div class="page-content">
+  <div class="page-content single-column">
     <div class="container">
       <main>
-        <section>
-          <h2 class="section-heading">Work Experience</h2>
-
-          <h3>Game Developer Intern - Paleta Cenografia</h3>
-
-          <p class="section-label">06/2025 - Present</p>
-
-          <p>Engineered interactive real-time systems within <strong>Unreal Engine 5</strong>, focusing on <strong>C++</strong> gameplay logic implementation and performance optimization.</p>
-
-          <ul>
-            <li>Developed <strong>Python</strong> and <strong>C++/Blueprint</strong> automation scripts and tools to improve workflow efficiency and fix bugs.</li>
-            <li>Implemented <strong>Git</strong> and <strong>Gluon</strong> version control, standardizing the studio workflow.</li>
-            <li>Programmed character controllers and interactive systems.</li>
-          </ul>
-
-          <!-- ----------------------------- -->
-
-          <h3>Translator - Freelancer</h3>
-
-          <p class="section-label">07/2019 - 12/2019</p>
-
-          <p>Collaboratively translated an art book (English to Portuguese), ensuring technical accuracy and localization.</p>
-        </section>
-
         <section>
           <h2 class="section-heading">Projects</h2>
 
           <div>
-            <h3>MAGE Engine (Vulkan)</h3>
-            <p>Lightweight rendering engine built to understand <strong>low-level</strong> graphics API concepts.</p>
+            <h3>MAGE &mdash; Custom Vulkan Graphics Framework</h3>
+            <p>A C++ graphics framework built from scratch on <strong>Vulkan</strong>, designed as a foundation for my own emulators and rendering projects.</p>
 
             <ul>
-              <li>Implemented <strong>Vulkan</strong> pipeline initialization, swapchain management, and vertex buffers.
-              </li>
-              <li>Developed efficient memory management for vertex data transfer.</li>
-              <li>Handled real-time window resizing and synchronization.</li>
+              <li>Wraps device setup, swapchain recreation, command buffers, descriptor pools, and texture loading behind small <strong>RAII</strong> classes with builder-style configuration.</li>
+              <li>Renders textured 3D scenes via global UBOs, push constants, and a camera supporting both perspective and orthographic projection.</li>
+              <li>Powers my Chip-8 emulator and will be the rendering backbone for my SNES emulator (final-year project).</li>
             </ul>
           </div>
 
           <div>
-            <h3>PongGL (C++ & OpenGL)</h3>
-            <p>Recreation of Pong focused on building a game loop from scratch without an engine.</p>
+            <h3>Chip-8 Emulator</h3>
+            <p>A complete Chip-8 emulator in <strong>C++</strong>, written to validate my custom Vulkan framework against a real workload.</p>
 
             <ul>
-              <li>Built a 2D rendering pipeline using pure <strong>OpenGL</strong> and <strong>C++</strong>.</li>
-              <li>Engineered AABB collision detection and physics calculations manually.</li>
-              <li>Developed a two-player game loop and implementation.</li>
+              <li>Implements all 35 opcodes with independent 960&nbsp;Hz CPU and 60&nbsp;Hz timer loops and full keypad input.</li>
+              <li>Dispatches opcodes via function-pointer tables and sub-tables instead of a switch.</li>
+              <li>Uploads the 64&times;32 framebuffer to a Vulkan texture each frame and samples it in a <strong>Slang</strong> fragment shader.</li>
             </ul>
           </div>
+
+          <div>
+            <h3>PongGL &mdash; OpenGL Pong (C++)</h3>
+            <p>A from-scratch Pong recreation &mdash; my entry point into graphics programming, building a full game loop without an engine.</p>
+
+            <ul>
+              <li>2D rendering pipeline built directly on <strong>OpenGL</strong> and <strong>C++</strong>.</li>
+              <li>Manual AABB collision detection and physics calculations.</li>
+              <li>Two-player game loop and gameplay logic implemented from scratch.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Nada Aqui &mdash; Slay the Spire 2 Mod</h3>
+            <p>A custom character mod for Slay the Spire 2, built on Alchyr's mod template and BaseLib, designed around three interlocking mechanics. Currently in early development.</p>
+
+            <ul>
+              <li><strong>Hype:</strong> a momentum counter built during combat that gates or amplifies certain cards.</li>
+              <li><strong>Combo cards:</strong> "joke" cards that set up "punchline" payoffs, rewarding sequencing across turns.</li>
+              <li><strong>Gambling:</strong> percentage-based card and relic effects centered on risk/reward.</li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="info-columns">
+          <section>
+            <h2 class="section-heading">Skills</h2>
+            <p><strong>Languages:</strong> C++ (Strong), C#, Lua, Python, GLSL/Slang</p>
+            <p><strong>Engines &amp; APIs:</strong> Unreal Engine 5 (C++ &amp; Blueprints), Unity, Vulkan, OpenGL</p>
+            <p><strong>Tools:</strong> Git, Gluon, Aseprite / Pixel Art, Adobe Photoshop, DaVinci Resolve</p>
+          </section>
+
+          <section>
+            <h2 class="section-heading">Languages</h2>
+            <p><strong>Portuguese:</strong> Native</p>
+            <p><strong>English:</strong> Fluent (C2-equivalent, self-assessed)</p>
+          </section>
+        </div>
+
+        <div class="spacer3"></div>
+
+        <section>
+          <h2 class="section-heading">Work Experience</h2>
+
+          <h3>Game Developer Intern &mdash; Paleta Cenografia</h3>
+
+          <p class="section-label">06/2025 - 03/2026</p>
+
+          <p>Hired as a game developer; built interactive real-time systems in <strong>Unreal Engine 5</strong>, with the role expanding into architectural rendering.</p>
+
+          <ul>
+            <li>Programmed runtime character controllers and interactive systems, turning static scenes into playable experiences.</li>
+            <li>Built automation scripts and tools in <strong>Python</strong>, <strong>C++</strong>, and <strong>Blueprints</strong> to streamline asset integration and rendering workflows.</li>
+            <li>Co-led adoption of <strong>Git</strong> and <strong>Gluon</strong>, standardizing source control for binary assets and project data.</li>
+          </ul>
+
+          <!-- ----------------------------- -->
+
+          <h3>Translator &mdash; Freelance</h3>
+
+          <p class="section-label">07/2019 - 12/2019</p>
+
+          <p>Collaborated with translator Elaine Nemoto on translating an art book from English to Portuguese, ensuring technical accuracy and localization.</p>
+
+          <!-- ----------------------------- -->
+
+          <h3>English Teaching Assistant</h3>
+
+          <p class="section-label">01/2018 - 12/2018</p>
+
+          <ul>
+            <li>Led conversation practice sessions to build students' fluency in spoken English.</li>
+            <li>Reviewed written assignments, giving feedback on grammar, vocabulary, and phrasing.</li>
+            <li>Supported the lead instructor during classes and assisted students one-on-one.</li>
+          </ul>
         </section>
 
         <section>
@@ -142,65 +192,13 @@
           <p class="section-label">UNISOCIESC | Est. Graduation 12/2026</p>
           <ul>
             <li>GPA: 3.73 / 4.0</li>
+            <li>Final-year project (TCC): SNES emulator built on a custom Vulkan graphics framework.</li>
           </ul>
 
           <h3>Technologist Diploma in Digital Games</h3>
           <p class="section-label">UNINTER | Est. Graduation 06/2027</p>
         </section>
       </main>
-
-      <!-- Sidebar Section -->
-      <aside>
-        <section>
-          <h2 class="section-heading">Hard Skills</h2>
-
-          <h4>Programming Languages</h4>
-          <ul class="unstyled-list">
-            <div class="soft-skills-container">
-              <span class="soft-skill-tag">C++ (Strong)</span>
-              <span class="soft-skill-tag">C#</span>
-              <span class="soft-skill-tag">LUA</span>
-              <span class="soft-skill-tag">Python</span>
-            </div>
-          </ul>
-
-          <h4>Engines & APIs</h4>
-          <ul class="unstyled-list">
-            <div class="soft-skills-container">
-              <span class="soft-skill-tag">Unreal Engine 5</span>
-              <span class="soft-skill-tag">Unity</span>
-              <span class="soft-skill-tag">Vulkan</span>
-              <span class="soft-skill-tag">OpenGL</span>
-            </div>
-          </ul>
-
-          <h4>Tools</h4>
-          <ul class="unstyled-list">
-            <div class="soft-skills-container">
-              <span class="soft-skill-tag">Git</span>
-              <span class="soft-skill-tag">Gluon</span>
-              <span class="soft-skill-tag">Aseprite / Pixel Art</span>
-              <span class="soft-skill-tag">Adobe Photoshop</span>
-              <span class="soft-skill-tag">DaVinci Resolve</span>
-            </div>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="section-heading">Languages</h2>
-          <ul class="unstyled-list">
-            <li>
-              <h3>Portuguese</h3>
-              <p class="section-label">Native</p>
-            </li>
-
-            <li>
-              <h3>English</h3>
-              <p class="section-label">C2 - Proficiente</p>
-            </li>
-          </ul>
-        </section>
-      </aside>
     </div>
   </div>
 
