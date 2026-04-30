@@ -37,6 +37,43 @@
     display: block;
     margin-bottom: 1.5rem;
   }
+
+  /* Firefox treats grid containers as atomic — must be block to allow fragmentation */
+  .page-content,
+  .page-content .container {
+    display: block !important;
+    height: auto !important;
+  }
+
+  /* Firefox doesn't reliably render flex ::before/::after near page breaks;
+     switch to inline-block technique */
+  .section-heading {
+    display: block !important;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .section-heading::before,
+  .section-heading::after {
+    content: "" !important;
+    display: inline-block !important;
+    width: 50%;
+    height: 0;
+    border-top: 1px solid #999 !important;
+    border-bottom: none !important;
+    vertical-align: middle;
+  }
+
+  .section-heading::before {
+    margin-left: -50%;
+    margin-right: 0.75em;
+  }
+
+  .section-heading::after {
+    margin-right: -50%;
+    margin-left: 0.75em;
+  }
 }
 
 .github-link {
@@ -58,10 +95,6 @@ html {
 
 a[href]::after {
   content: "";
-}
-
-section {
-  page-break-inside: avoid;
 }
 
 header {
