@@ -4,11 +4,8 @@
   --header-footer-bg-color: #f0f0f0;
   --aside-accent-color: #941AFF;
   --skill-bar-fill-color: #B35CFF;
-  --blockquote-bg-color: #f7fafc;
-  --blockquote-accent-color: #4a5568;
-  --blockquote-text-color: #4a5568;
-  --spacing-inline: 0.5rem;
   --skill-bar-border: #941AFF;
+  --spacing-inline: 0.5rem;
 }
 
 .soft-skills-container {
@@ -133,11 +130,6 @@ section {
 }
 
 /* Utility */
-.block {
-  display: block;
-  margin: 0.25rem 0;
-}
-
 .flex-responsive {
   display: flex;
   flex-direction: column;
@@ -300,100 +292,6 @@ aside li {
   display: flex; /* This is for HTML Whitespace Issues */
 }
 
-/* Skillbars */
-.skill-bar {
-  width: 100%;
-  height: 1.5rem;
-  margin-top: 0.25rem;
-  margin-bottom: 1rem;
-  background: #eee;
-  border: 1px solid #848484;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.skill-bar-fill {
-  height: 100%;
-  background: var(--skill-bar-fill-color) !important;
-  border-right: 1px solid #848484;
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  padding-left: 0.5rem;
-}
-
-.skill-bar-label {
-  color: #333;
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.w-0 {
-  width: 0%;
-}
-
-.w-10 {
-  width: 10%;
-}
-
-.w-20 {
-  width: 20%;
-}
-
-.w-25 {
-  width: 25%;
-}
-
-.w-30 {
-  width: 30%;
-}
-
-.w-40 {
-  width: 40%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-60 {
-  width: 60%;
-}
-
-.w-70 {
-  width: 70%;
-}
-
-.w-75 {
-  width: 75%;
-}
-
-.w-80 {
-  width: 80%;
-}
-
-.w-90 {
-  width: 90%;
-}
-
-.w-100 {
-  width: 100%;
-  border-right: none;
-}
-
-/* Blockquotes */
-blockquote {
-  margin: 1rem 2rem;
-  padding: 1.5rem 2rem;
-  background-color: var(--blockquote-bg-color);
-  border-left: 4px solid var(--blockquote-accent-color);
-  font-style: italic;
-  color: var(--blockquote-text-color);
-  line-height: 1.6;
-  border-radius: 0 4px 4px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
 @media (min-width: 37.5rem) {
   .main-gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -480,18 +378,11 @@ blockquote {
 }
 
 @media print {
-  .skill-bar-label {
-    background: transparent !important;
-    background-color: transparent !important;
-    mix-blend-mode: darken;
-  }
-
   body {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     display: block;
     min-height: 0;
   }
-
 }
 

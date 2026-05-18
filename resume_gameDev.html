@@ -5,44 +5,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Site Info -->
   <title>Miguel Pafume Rodrigues - CV</title>
   <meta name="description"
     content="Miguel Pafume Rodrigues - Game and graphics programmer with experience in Unreal Engine 5, C++, Vulkan and C#.">
   <meta name="author" content="Miguel Pafume Rodrigues">
 
-  <!-- Open Graph Tags: Typically set to "website" for static sites or "article" for content-heavy pages. -->
-  <meta property="og:type" content="website">
-
-  <!-- Open Graph Tags: The URL of the page, used to ensure link previews resolve to the correct page. -->
-  <meta property="og:url" content="127.0.0.1:5500/index.html">
-
-  <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Custom Font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
 
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/modern_normalize.css" />
+  <link rel="stylesheet" href="css/modern_normalize.css">
   <link rel="stylesheet" href="css/html5bp.css">
   <link rel="stylesheet" href="css/main-resume.css">
   <link rel="stylesheet" href="css/resume.css">
 
-
-  <!-- Favicon for all browsers -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-
-  <!-- Apple touch icon for iOS devices -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
-
-  <!-- Content Security Policy: Uncomment to enhance security by restricting where content can be loaded from (useful for preventing certain attacks like XSS). Update if adding external sources (e.g., Google Fonts, Bootstrap CDN, analytics, etc). -->
-  <!-- <meta http-equiv="Content-Security-Policy" content=" default-src 'self'; script-src 'self' code.jquery.com; style-src 'self' fonts.googleapis.com; font-src fonts.gstatic.com; img-src 'self' images.examplecdn.com; "> -->
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
 </head>
 
 <body class="compact">
@@ -98,7 +78,7 @@
           <h2 class="section-heading">Projects</h2>
 
           <div>
-            <h3>MAGE &mdash; Custom Vulkan Graphics Framework</h3>
+            <h3><a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank">MAGE &mdash; Custom Vulkan Graphics Framework</a></h3>
             <p>A C++ graphics framework built from scratch on <strong>Vulkan</strong>, designed as a foundation for my own emulators and rendering projects.</p>
 
             <ul>
@@ -109,7 +89,7 @@
           </div>
 
           <div>
-            <h3>Chip-8 Emulator</h3>
+            <h3><a href="https://github.com/miguelpafume/Chip8" target="_blank">Chip-8 Emulator</a></h3>
             <p>A complete Chip-8 emulator in <strong>C++</strong>, written to validate my custom Vulkan framework against a real workload.</p>
 
             <ul>
@@ -120,24 +100,24 @@
           </div>
 
           <div>
-            <h3>PongGL &mdash; OpenGL Pong (C++)</h3>
-            <p>A from-scratch Pong recreation &mdash; my entry point into graphics programming, building a full game loop without an engine.</p>
-
-            <ul>
-              <li>2D rendering pipeline built directly on <strong>OpenGL</strong> and <strong>C++</strong>.</li>
-              <li>Manual AABB collision detection and physics calculations.</li>
-              <li>Two-player game loop and gameplay logic implemented from scratch.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Nada Aqui &mdash; Slay the Spire 2 Mod</h3>
+            <h3><a href="https://github.com/miguelpafume/STS2_NadaAquiMod" target="_blank">Nada Aqui &mdash; Slay the Spire 2 Mod</a></h3>
             <p>A custom character mod for Slay the Spire 2, built on Alchyr's mod template and BaseLib, designed around three interlocking mechanics. Currently in early development.</p>
 
             <ul>
               <li><strong>Hype:</strong> a momentum counter built during combat that gates or amplifies certain cards.</li>
               <li><strong>Combo cards:</strong> "joke" cards that set up "punchline" payoffs, rewarding sequencing across turns.</li>
               <li><strong>Gambling:</strong> percentage-based card and relic effects centered on risk/reward.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3><a href="https://github.com/miguelpafume/PongGL" target="_blank">PongGL &mdash; OpenGL Pong (C++)</a></h3>
+            <p>A from-scratch Pong recreation &mdash; my entry point into graphics programming, building a full game loop without an engine. Archived as-is.</p>
+
+            <ul>
+              <li>2D rendering pipeline built directly on <strong>OpenGL</strong> and <strong>C++</strong>.</li>
+              <li>Manual AABB collision detection and physics calculations.</li>
+              <li>Two-player game loop and gameplay logic implemented from scratch.</li>
             </ul>
           </div>
         </section>

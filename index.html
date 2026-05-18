@@ -62,8 +62,6 @@
 
         <section id="home">
             <div class="container">
-                <div style="padding-top: 1rem;"></div>
-
                 <div class="header-top flex-responsive">
 
                     <img    class="header-image"
@@ -86,9 +84,9 @@
 
                 <h1 class="section-heading">About Me</h1>
                 <div class="about-me">
-                    <p>Hey! I'm a software engineering student in Brazil, graduating December 2026, focused on game and graphics programming. Most of my work is in C++ and on the lower-level side of game development &mdash; graphics APIs, engine internals, and emulation.</p>
+                    <p>Hey! I'm a software engineering student in Brazil, graduating December 2026, focused on game and graphics programming. Most of my work is in C++ and on the lower-level side of game development - graphics APIs, engine internals, and emulation.</p>
 
-                    <p>I work primarily in C++, Vulkan, C# and Git, and I'm comfortable in Lua, Gluon/Plastic, and Python. I also do pixel art for my own projects. Most of my personal work is public on my <a href="https://github.com/miguelpafume" target="_blank" rel="noopener noreferrer">GitHub</a> &mdash; always open to chatting about graphics programming, engine work, or game dev opportunities!</p>
+                    <p>I work primarily in C++, Vulkan, C# and Git, and I'm comfortable in Lua, Gluon/Plastic, and Python. I also do pixel art for my own projects. Most of my personal work is public on my <a href="https://github.com/miguelpafume" target="_blank" rel="noopener noreferrer">GitHub</a> - always open to chatting about graphics programming, engine work, or game dev opportunities!</p>
                 </div>
 
                 <h1 class="section-heading">Technologies</h1>
@@ -148,7 +146,6 @@
                     </div>
                 </div>
             </div>
-            <div style="padding-top: 1rem;"></div>
         </section>
 
         <section id="resume">
@@ -175,7 +172,7 @@
                                         height="16" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                                     </svg>
-                                    <span class="no-print" style="font-size: 1.2rem;">LinkedIn</span>
+                                    <span class="no-print contact-label">LinkedIn</span>
                                 </a>
                             </li>
                             <li>
@@ -184,12 +181,12 @@
                                         height="16" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
                                     </svg>
-                                    <span class="no-print" style="font-size: 1.2rem;">GitHub</span>
+                                    <span class="no-print contact-label">GitHub</span>
                                 </a>
                             </li>
                         </ul>
 
-                        <p class="info-summary">Software Engineering student focused on game and graphics programming, with professional experience in Unreal Engine 5. Most at home in C++ and the lower-level side of development &mdash; graphics APIs (Vulkan, OpenGL), engine internals, and emulation.</p>
+                        <p class="info-summary">Software Engineering student focused on game and graphics programming, with professional experience in Unreal Engine 5. Most at home in C++ and the lower-level side of development - graphics APIs (Vulkan, OpenGL), engine internals, and emulation.</p>
                     </div>
                 </div>
             </div>
@@ -197,6 +194,109 @@
             <div class="page-content">
                 <div class="container">
                     <main>
+                        <div id="personal-projects">
+                            <h2 class="section-heading">Projects</h2>
+
+                            <div>
+                                <h3>
+                                    <a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank">MAGE - Custom Vulkan Graphics Framework</a>
+                                </h3>
+                                <p>A C++ graphics framework built from scratch on Vulkan, designed as a foundation for my own emulators and rendering projects.</p>
+                                <ul>
+                                    <li>Wraps device setup, swapchain recreation, command buffers, descriptor pools, and texture loading behind small RAII classes with builder-style configuration.</li>
+                                    <li>Renders textured 3D scenes via global UBOs, push constants, and a camera supporting both perspective and orthographic projection.</li>
+                                    <li>Powers my Chip-8 emulator and will be the rendering backbone for my SNES emulator (final-year project).</li>
+                                </ul>
+                                <div class="gallery main-gallery">
+                                    <figure>
+                                        <img src="img/projects/mage1.png" alt="Base triangle">
+                                        <figcaption>Base triangle</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="img/projects/mage2.png" alt="Dimensions 1">
+                                        <figcaption>Dimensions 1</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="img/projects/mage3.png" alt="Dimensions 2">
+                                        <figcaption>Dimensions 2</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    <a href="https://github.com/miguelpafume/Chip8" target="_blank">Chip-8 Emulator</a>
+                                </h3>
+                                <p>A complete Chip-8 emulator in C++, written to validate my custom Vulkan framework against a real workload.</p>
+                                <ul>
+                                    <li>Implements all 35 opcodes with independent 960&nbsp;Hz CPU and 60&nbsp;Hz timer loops and full keypad input.</li>
+                                    <li>Dispatches opcodes via function-pointer tables instead of a switch.</li>
+                                    <li>Uploads the 64&times;32 framebuffer to a Vulkan texture each frame and samples it in a Slang fragment shader.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    <a href="https://github.com/miguelpafume/STS2_NadaAquiMod" target="_blank">Nada Aqui - Slay the Spire 2 Mod</a>
+                                </h3>
+                                <p>A custom character mod for Slay the Spire 2, built on Alchyr's mod template and BaseLib, designed around three interlocking mechanics. Currently in early development.</p>
+                                <ul>
+                                    <li><strong>Hype:</strong> a momentum counter built during combat that gates or amplifies certain cards.</li>
+                                    <li><strong>Combo cards:</strong> "joke" cards that set up "punchline" payoffs, rewarding sequencing across turns.</li>
+                                    <li><strong>Gambling:</strong> percentage-based card and relic effects centered on risk/reward.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3>
+                                    <a href="https://github.com/miguelpafume/PongGL" target="_blank">PongGL - OpenGL Pong (C++)</a>
+                                </h3>
+                                <p>A from-scratch Pong recreation - my entry point into graphics programming, building a full game loop without an engine. Archived as-is.</p>
+                                <ul>
+                                    <li>2D rendering pipeline built directly on OpenGL and C++.</li>
+                                    <li>Manual AABB collision detection and physics calculations.</li>
+                                    <li>Two-player game loop and gameplay logic implemented from scratch.</li>
+                                </ul>
+                                <div class="gallery main-gallery">
+                                    <figure>
+                                        <img src="img/projects/pong1.png" alt="Base game">
+                                        <figcaption>Base game</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 class="section-heading">Work Experience</h2>
+
+                            <div>
+                                <h3>Game Developer Intern - <a href="https://www.linkedin.com/company/paletacenografia/">Paleta Cenografia</a></h3>
+                                <p class="section-label">06/2025 - 03/2026</p>
+                                <p>Hired as a game developer; built interactive real-time systems in Unreal Engine 5, with the role expanding into architectural rendering.</p>
+                                <ul>
+                                    <li>Programmed runtime character controllers and interactive systems, turning static scenes into playable experiences.</li>
+                                    <li>Built automation scripts and tools in Python, C++, and Blueprints to streamline asset integration and rendering workflows.</li>
+                                    <li>Co-led adoption of Git and Gluon, standardizing source control for binary assets and project data.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3>Translator - Freelance</h3>
+                                <p class="section-label">07/2019 - 12/2019</p>
+                                <p>Collaborated with translator Elaine Nemoto on translating an art book from English to Portuguese, ensuring technical accuracy and localization.</p>
+                            </div>
+
+                            <div>
+                                <h3>English Teaching Assistant - Up To You</h3>
+                                <p class="section-label">01/2018 - 12/2018</p>
+                                <ul>
+                                    <li>Led conversation practice sessions to build students' fluency in spoken English.</li>
+                                    <li>Reviewed written assignments, giving feedback on grammar, vocabulary, and phrasing.</li>
+                                    <li>Supported the lead instructor during classes and assisted students one-on-one.</li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div>
                             <h2 class="section-heading">Education</h2>
 
@@ -210,105 +310,6 @@
 
                             <h3>Technologist Diploma in Digital Games</h3>
                             <p class="section-label"><a href="https://www.uninter.com" target="_blank">UNINTER</a> | Est. Graduation 06/2027</p>
-                        </div>
-
-                        <div>
-                            <h2 class="section-heading">Work Experience</h2>
-
-                            <div>
-                                <h3>Game Developer Intern &mdash; <a href="https://www.linkedin.com/company/paletacenografia/">Paleta Cenografia</a></h3>
-                                <p class="section-label">06/2025 - 03/2026</p>
-                                <p>Hired as a game developer; built interactive real-time systems in Unreal Engine 5, with the role expanding into architectural rendering.</p>
-                                <ul>
-                                    <li>Programmed runtime character controllers and interactive systems, turning static scenes into playable experiences.</li>
-                                    <li>Built automation scripts and tools in Python, C++, and Blueprints to streamline asset integration and rendering workflows.</li>
-                                    <li>Co-led adoption of Git and Gluon, standardizing source control for binary assets and project data.</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3>Translator &mdash; Freelance</h3>
-                                <p class="section-label">07/2019 - 12/2019</p>
-                                <p>Collaborated with translator Elaine Nemoto on translating an art book from English to Portuguese, ensuring technical accuracy and localization.</p>
-                            </div>
-
-                            <div>
-                                <h3>English Teaching Assistant &mdash; Up To You</h3>
-                                <p class="section-label">01/2018 - 12/2018</p>
-                                <ul>
-                                    <li>Led conversation practice sessions to build students' fluency in spoken English.</li>
-                                    <li>Reviewed written assignments, giving feedback on grammar, vocabulary, and phrasing.</li>
-                                    <li>Supported the lead instructor during classes and assisted students one-on-one.</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div id="personal-projects">
-                            <h2 class="section-heading">Projects</h2>
-
-                            <div>
-                                <h3>
-                                    <a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank">MAGE &mdash; Custom Vulkan Graphics Framework</a>
-                                </h3>
-                                <p>A C++ graphics framework built from scratch on Vulkan, designed as a foundation for my own emulators and rendering projects.</p>
-                                <ul>
-                                    <li>Wraps device setup, swapchain recreation, command buffers, descriptor pools, and texture loading behind small RAII classes with builder-style configuration.</li>
-                                    <li>Renders textured 3D scenes via global UBOs, push constants, and a camera supporting both perspective and orthographic projection.</li>
-                                    <li>Powers my Chip-8 emulator and will be the rendering backbone for my SNES emulator (final-year project).</li>
-                                </ul>
-                                <div class="gallery main-gallery">
-                                    <figure>
-                                        <img src="img/projects/mage1.png" alt="Base triangle" class="zoom">
-                                        <figcaption>Base triangle</figcaption>
-                                    </figure>
-                                    <figure>
-                                        <img src="img/projects/mage2.png" alt="Dimensions 1" class="zoom">
-                                        <figcaption>Dimensions 1</figcaption>
-                                    </figure>
-                                    <figure>
-                                        <img src="img/projects/mage3.png" alt="Dimensions 2" class="zoom">
-                                        <figcaption>Dimensions 2</figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Chip-8 Emulator</h3>
-                                <p>A complete Chip-8 emulator in C++, written to validate my custom Vulkan framework against a real workload.</p>
-                                <ul>
-                                    <li>Implements all 35 opcodes with independent 960&nbsp;Hz CPU and 60&nbsp;Hz timer loops and full keypad input.</li>
-                                    <li>Dispatches opcodes via function-pointer tables instead of a switch.</li>
-                                    <li>Uploads the 64&times;32 framebuffer to a Vulkan texture each frame and samples it in a Slang fragment shader.</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h3>
-                                    <a href="https://github.com/miguelpafume/PongGL" target="_blank">PongGL &mdash; OpenGL Pong (C++)</a>
-                                </h3>
-                                <p>A from-scratch Pong recreation &mdash; my entry point into graphics programming, building a full game loop without an engine.</p>
-                                <ul>
-                                    <li>2D rendering pipeline built directly on OpenGL and C++.</li>
-                                    <li>Manual AABB collision detection and physics calculations.</li>
-                                    <li>Two-player game loop and gameplay logic implemented from scratch.</li>
-                                </ul>
-                                <div class="gallery main-gallery">
-                                    <figure>
-                                        <img src="img/projects/pong1.png" alt="Base game" class="zoom">
-                                        <figcaption>Base game</figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3>Nada Aqui &mdash; Slay the Spire 2 Mod</h3>
-                                <p>A custom character mod for Slay the Spire 2, built on Alchyr's mod template and BaseLib, designed around three interlocking mechanics. Currently in early development.</p>
-                                <ul>
-                                    <li><strong>Hype:</strong> a momentum counter built during combat that gates or amplifies certain cards.</li>
-                                    <li><strong>Combo cards:</strong> "joke" cards that set up "punchline" payoffs, rewarding sequencing across turns.</li>
-                                    <li><strong>Gambling:</strong> percentage-based card and relic effects centered on risk/reward.</li>
-                                </ul>
-                            </div>
                         </div>
                     </main>
 
@@ -380,7 +381,7 @@
 
                             <div>
                                 <h3>Languages</h3>
-                                <p>I love learning languages in my free time. Each new language is a door to different cultures &mdash; and different content.</p>
+                                <p>I love learning languages in my free time. Each new language is a door to different cultures - and different content.</p>
                                 <div class="gallery side-gallery">
                                     <figure>
                                         <img src="img/interests/interest1.png"
@@ -409,8 +410,275 @@
 
         <section id="projects">
             <div class="page-content">
-                <div class="container">
-                    <h1>WIP</h1>
+                <div class="container projects-container">
+                    <header class="projects-intro">
+                        <h1 class="section-heading">Projects</h1>
+                        <p>A deeper look at the things I've built - READMEs distilled, with screenshots and demos where I have them. More on <a href="https://github.com/miguelpafume" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+                    </header>
+
+                    <!-- MAGE-Engine -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-title-group">
+                                <h2><a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank" rel="noopener noreferrer">MAGE-Engine</a></h2>
+                                <p class="project-tagline"><strong>M</strong>asterful <strong>A</strong>pplication <strong>G</strong>ame <strong>E</strong>ngine - a Vulkan-based C++ framework for building games and emulators from scratch.</p>
+                            </div>
+                            <span class="project-status status-active">In Development</span>
+                        </div>
+
+                        <div class="project-media main-gallery gallery">
+                            <figure class="media-slot">
+                                <img src="img/projects/mage1.png" alt="Square window - 3D Cube">
+                                <figcaption>Square window - 3D Cube</figcaption>
+                            </figure>
+                            <figure class="media-slot">
+                                <img src="img/projects/mage2.png" alt="Tall window - 2D Triangle">
+                                <figcaption>Tall window - 2D Triangle</figcaption>
+                            </figure>
+                            <figure class="media-slot">
+                                <img src="img/projects/mage3.png" alt="FullScreen - 3D Cube">
+                                <figcaption>FullScreen - 3D Cube</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-section">
+                                <h3>About</h3>
+                                <p>MAGE is a personal project initially made for university and born out of a desire to actually understand what's happening under the hood - from GPU command buffers up to the game loop - instead of reaching for a black-box engine every time. The goal is to grow it into a small, hackable foundation for 2D games (maybe 2.5D / isometric later), emulators (CHIP-8 was the first target), and any side-project that needs a rendering surface, input, and a place to draw pixels.</p>
+                                <p>A learning project first, a reusable library second.</p>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Tech</h3>
+                                <div class="skills-container">
+                                    <span class="skill-tag">C++20</span>
+                                    <span class="skill-tag">Vulkan</span>
+                                    <span class="skill-tag">CMake &ge; 3.26</span>
+                                    <span class="skill-tag">Slang</span>
+                                    <span class="skill-tag">GLFW 3.4</span>
+                                    <span class="skill-tag">GLM 1.0.1</span>
+                                    <span class="skill-tag">Dear ImGui</span>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Roadmap</h3>
+                                <ul class="todo-list">
+                                    <li>Hot-reload for shaders</li>
+                                    <li>Debug UI with ImGui</li>
+                                    <li>VMA (Vulkan Memory Allocation) integration</li>
+                                    <li>Audio subsystem</li>
+                                    <li>Asset pipeline - glTF model loading, texture streaming</li>
+                                    <li>Scene graph / proper ECS for <code>GameObject</code></li>
+                                    <li>CI build (Linux + Windows)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <footer class="project-links">
+                            <a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                                <span>Repository</span>
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Chip8 -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-title-group">
+                                <h2><a href="https://github.com/miguelpafume/Chip8" target="_blank" rel="noopener noreferrer">Chip-8 Interpreter</a></h2>
+                                <p class="project-tagline">A CHIP-8 interpreter in C++20 - 960&nbsp;Hz CPU, 60&nbsp;Hz delay/sound timers, framebuffer uploaded each frame as a Vulkan texture and drawn on a fullscreen quad.</p>
+                            </div>
+                            <span class="project-status status-active">Functional</span>
+                        </div>
+
+                        <div class="project-media main-gallery gallery">
+                            <figure class="media-slot">
+                                <img src="img/projects/chip8-worm.gif" alt="worm gameplay gif">
+                                <figcaption>worm gameplay gif</figcaption>
+                            </figure>
+                            <figure class="media-slot">
+                                <img src="img/projects/chip8-tetris.gif" alt="tetris gameplay gif">
+                                <figcaption>tetris gameplay gif</figcaption>
+                            </figure>
+                            <figure class="media-slot">
+                                <img src="img/projects/chip8-opcodes.png" alt="test_opcode screenshot">
+                                <figcaption>test_opcode screenshot</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-section">
+                                <h3>What it does</h3>
+                                <ul>
+                                    <li>Loads a <code>.ch8</code> ROM from <code>roms/</code> and executes it.</li>
+                                    <li>Renders the CHIP-8 monochrome display scaled to the window while preserving the 2:1 aspect ratio.</li>
+                                    <li>Maps the CHIP-8 hex keypad onto QWERTY (1234 / QWER / ASDF / ZXCV).</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Tech</h3>
+                                <div class="skills-container">
+                                    <span class="skill-tag">C++20</span>
+                                    <span class="skill-tag">CMake</span>
+                                    <span class="skill-tag">MAGE-Engine v0.1.2</span>
+                                    <span class="skill-tag">Vulkan</span>
+                                    <span class="skill-tag">GLFW</span>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Roadmap</h3>
+                                <ul class="todo-list">
+                                    <li><strong>ROM selection at runtime</strong> - accept a ROM path as a CLI arg so swapping ROMs doesn't require a rebuild.</li>
+                                    <li><strong>Crude GUI</strong> - a Dear ImGui overlay for ROM picking, pause/reset/step, and live CPU rate tuning.</li>
+                                    <li><strong>Sound</strong> - the sound timer ticks but no beep is emitted yet.</li>
+                                    <li><strong>Configurable keymap</strong> - remap keys without recompiling.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <footer class="project-links">
+                            <a href="https://github.com/miguelpafume/Chip8" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                                <span>Repository</span>
+                            </a>
+                            <a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                                <span>Built on MAGE-Engine</span>
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- Nada Aqui Mod -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-title-group">
+                                <h2><a href="https://github.com/miguelpafume/STS2_NadaAquiMod" target="_blank" rel="noopener noreferrer">Nada Aqui Mod</a></h2>
+                                <p class="project-tagline">A custom character mod for <strong>Slay the Spire 2</strong> adding the <em>Jester</em> class. Built on Alchyr's mod template and BaseLib. Originally a collaborative idea between me and my friends, now solo-developed by me.</p>
+                            </div>
+                            <span class="project-status status-early">Early Development</span>
+                        </div>
+
+                        <!-- <div class="project-media main-gallery gallery">
+                            <figure class="media-slot">
+                                <div class="media-placeholder" data-hint="card / mod_image"></div>
+                                <figcaption>img/projects/nada-1.png</figcaption>
+                            </figure>
+                            <figure class="media-slot">
+                                <div class="media-placeholder" data-hint="hype / combo vfx"></div>
+                                <figcaption>img/projects/nada-2.gif</figcaption>
+                            </figure>
+                            <figure class="media-slot">
+                                <div class="media-placeholder" data-hint="gameplay clip"></div>
+                                <figcaption>img/projects/nada-3.gif</figcaption>
+                            </figure>
+                        </div> -->
+
+                        <div class="project-body">
+                            <div class="project-section">
+                                <h3>The Jester</h3>
+                                <p>A trickster class designed around three interlocking mechanics:</p>
+                                <ul>
+                                    <li><strong>Hype</strong> - a momentum counter built during combat that gates or amplifies certain cards. Decays 20% each round and resets at the end of combat.</li>
+                                    <li><strong>Joke / Punchline (Combo)</strong> - "joke" cards set up "punchline" payoffs, rewarding sequencing across turns and specific card interactions.</li>
+                                    <li><strong>Gambling</strong> - percentage-based card and relic effects centered on risk/reward.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Tech</h3>
+                                <div class="skills-container">
+                                    <span class="skill-tag">C#</span>
+                                    <span class="skill-tag">Mono Godot 4.5.1</span>
+                                    <span class="skill-tag">Slay the Spire 2</span>
+                                    <span class="skill-tag">BaseLib v3.0.8</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <footer class="project-links">
+                            <a href="https://github.com/miguelpafume/STS2_NadaAquiMod" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                                <span>Repository</span>
+                            </a>
+                            <a href="https://github.com/Alchyr/ModTemplate-StS2" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                                <span>Mod Template</span>
+                            </a>
+                            <a href="https://github.com/Alchyr/BaseLib-StS2/tree/v3.0.8" target="_blank" rel="noopener noreferrer" class="project-link project-link-secondary">
+                                <span>BaseLib</span>
+                            </a>
+                        </footer>
+                    </article>
+
+                    <!-- PongGL -->
+                    <article class="project-card">
+                        <div class="project-card-header">
+                            <div class="project-title-group">
+                                <h2><a href="https://github.com/miguelpafume/PongGL" target="_blank" rel="noopener noreferrer">PongGL</a></h2>
+                                <p class="project-tagline">A local two-player Pong clone written in C++ and rendered with OpenGL 4.6. My first proper personal project and entry into graphics programming.</p>
+                            </div>
+                            <span class="project-status status-archived">Archived</span>
+                        </div>
+
+                        <div class="project-media main-gallery gallery">
+                            <figure>
+                                <img src="img/projects/pong1.png" alt="PongGL base game">
+                                <figcaption>Base game</figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="project-body">
+                            <div class="project-section">
+                                <h3>About</h3>
+                                <p>The goal was never to ship a polished game, but to learn how a render loop actually works from the ground up instead of relying on a higher-level engine. The natural next steps (score display, menus, AI opponent, sound, a proper game-state machine) would mostly be gameplay polish rather than more graphics learning - so the repo is archived as-is and I took what I learned into a fresh project.</p>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Features</h3>
+                                <ul>
+                                    <li>Two-player local play with independent paddle controls.</li>
+                                    <li>Frame-rate independent movement.</li>
+                                    <li>Ball speed-up on every paddle hit, with min/max velocity clamping.</li>
+                                    <li>AABB-vs-circle paddle collision with a small cooldown to avoid double-hits.</li>
+                                    <li>Random initial ball direction, served toward the side that just lost.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Tech</h3>
+                                <div class="skills-container">
+                                    <span class="skill-tag">C++</span>
+                                    <span class="skill-tag">OpenGL 4.6</span>
+                                    <span class="skill-tag">GLFW</span>
+                                    <span class="skill-tag">Glad</span>
+                                    <span class="skill-tag">GLM</span>
+                                    <span class="skill-tag">stb</span>
+                                </div>
+                            </div>
+
+                            <div class="project-section">
+                                <h3>Controls</h3>
+                                <table class="controls-table">
+                                    <tbody>
+                                        <tr><td>Left paddle up</td><td><kbd>W</kbd></td></tr>
+                                        <tr><td>Left paddle down</td><td><kbd>S</kbd></td></tr>
+                                        <tr><td>Right paddle up</td><td><kbd>&uarr;</kbd></td></tr>
+                                        <tr><td>Right paddle down</td><td><kbd>&darr;</kbd></td></tr>
+                                        <tr><td>Quit</td><td><kbd>Esc</kbd></td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <footer class="project-links">
+                            <a href="https://github.com/miguelpafume/PongGL" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+                                <span>Repository</span>
+                            </a>
+                        </footer>
+                    </article>
                 </div>
             </div>
         </section>
@@ -441,9 +709,9 @@
         </footer>
     </div>
 
-    <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox">
+        <span class="close" aria-label="Close">&times;</span>
+        <img id="lightbox-img" alt="">
     </div>
 
     <script src="js/app.js"></script>
