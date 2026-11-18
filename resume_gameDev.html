@@ -7,8 +7,23 @@
 
   <title>Miguel Pafume Rodrigues - CV</title>
   <meta name="description"
-    content="Miguel Pafume Rodrigues - Game and graphics programmer with experience in Unreal Engine 5, C++, Vulkan and C#.">
+    content="Miguel Pafume Rodrigues - Game and graphics programmer with experience in Unreal Engine 5 (UE5), C++, Vulkan, OpenGL and C#.">
   <meta name="author" content="Miguel Pafume Rodrigues">
+  <link rel="canonical" href="https://miguelpafume.github.io/resume_gameDev.html">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Social link previews -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Miguel Pafume Rodrigues">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://miguelpafume.github.io/resume_gameDev.html">
+  <meta property="og:title" content="Miguel Pafume Rodrigues - Game &amp; Graphics Programmer CV">
+  <meta property="og:description"
+    content="Game and graphics programmer with experience in Unreal Engine 5, C++, Vulkan and C#.">
+  <meta property="og:image" content="https://miguelpafume.github.io/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +41,13 @@
 </head>
 
 <body class="compact">
+  <button type="button" class="print-button" onclick="window.print()">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+      <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1" />
+    </svg>
+    Download PDF
+  </button>
   <header class="page-header">
     <div class="container">
       <div class="header-top flex-responsive">
@@ -42,6 +64,18 @@
 
               <li>
                 <a href="tel:+5547991517103">+55 (47) 99151-7103</a>
+              </li>
+
+              <li>
+                <a href="https://miguelpafume.github.io/" class="github-link">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="github-icon">
+                  <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#000000" stroke-width="2"/>
+                  <path d="M16 12C16 16.9706 14.2091 21 12 21C9.79086 21 8 16.9706 8 12C8 7.02944 9.79086 3 12 3C14.2091 3 16 7.02944 16 12Z" stroke="#000000" stroke-width="2"/>
+                  <path d="M20 16.795C18.2145 15.7053 15.3666 15 12.1583 15C8.75309 15 5.75391 15.7945 4 17" stroke="#000000" stroke-width="2"/>
+                  <path d="M20 7.08688C18.2506 8.24353 15.3484 9 12.0641 9C8.69818 9 5.73365 8.2055 4 7" stroke="#000000" stroke-width="2"/>
+                  </svg>
+                  miguelpafume.github.io
+                </a>
               </li>
 
               <li>
@@ -64,7 +98,7 @@
             </ul>
           </address>
 
-          <p class="header-summary">Software Engineering student focused on <strong>game and graphics programming</strong>, with professional experience in <strong>Unreal Engine 5</strong>. Most at home in <strong>C++</strong> and the lower-level side of game development &mdash; graphics APIs (<strong>Vulkan</strong>, <strong>OpenGL</strong>), engine internals, and emulation &mdash; building both shipped tools and custom frameworks from scratch.</p>
+          <p class="header-summary">Software Engineering student focused on <strong>game and graphics programming</strong>, with professional experience in <strong>Unreal Engine 5 (UE5)</strong>. Most at home in <strong>C++</strong> and the low-level side of game development &mdash; <strong>real-time rendering</strong> and graphics APIs (<strong>Vulkan</strong>, <strong>OpenGL</strong>), engine internals, systems programming, and emulation &mdash; building both shipped tools and custom frameworks from scratch.</p>
 
         </div>
       </div>
@@ -79,23 +113,23 @@
 
           <div>
             <h3><a href="https://github.com/miguelpafume/MAGE-Engine" target="_blank">MAGE &mdash; Custom Vulkan Graphics Framework</a></h3>
-            <p>A C++ graphics framework built from scratch on <strong>Vulkan</strong>, designed as a foundation for my own emulators and rendering projects.</p>
+            <p>A C++ graphics framework built from scratch on <strong>Vulkan</strong>, architected as a reusable foundation for my own emulators and real-time rendering projects.</p>
 
             <ul>
-              <li>Wraps device setup, swapchain recreation, command buffers, descriptor pools, and texture loading behind small <strong>RAII</strong> classes with builder-style configuration.</li>
-              <li>Renders textured 3D scenes via global UBOs, push constants, and a camera supporting both perspective and orthographic projection.</li>
+              <li>Wraps device setup, swapchain recreation, <strong>graphics pipeline</strong> creation, command buffers, descriptor pools, and texture loading behind small <strong>RAII</strong> classes with builder-style configuration.</li>
+              <li>Handles <strong>GPU memory management</strong> and image layout transitions directly, and renders textured 3D scenes via global UBOs, push constants, and a camera supporting both perspective and orthographic projection.</li>
               <li>Powers my Chip-8 emulator and will be the rendering backbone for my SNES emulator (final-year project).</li>
             </ul>
           </div>
 
           <div>
             <h3><a href="https://github.com/miguelpafume/Chip8" target="_blank">Chip-8 Emulator</a></h3>
-            <p>A complete Chip-8 emulator in <strong>C++</strong>, written to validate my custom Vulkan framework against a real workload.</p>
+            <p>A complete Chip-8 emulator in <strong>C++</strong>, written to validate my custom Vulkan framework against a real workload and to work through <strong>CPU</strong>, memory, and timing behavior at the instruction level.</p>
 
             <ul>
-              <li>Implements all 35 opcodes with independent 960&nbsp;Hz CPU and 60&nbsp;Hz timer loops and full keypad input.</li>
-              <li>Dispatches opcodes via function-pointer tables and sub-tables instead of a switch.</li>
-              <li>Uploads the 64&times;32 framebuffer to a Vulkan texture each frame and samples it in a <strong>Slang</strong> fragment shader.</li>
+              <li>Implements all 35 <strong>opcodes</strong> with independent 960&nbsp;Hz CPU and 60&nbsp;Hz <strong>timing loops</strong> and full keypad input.</li>
+              <li>Dispatches opcodes via <strong>function-pointer tables</strong> and sub-tables instead of a switch.</li>
+              <li>Uploads the 64&times;32 framebuffer to a <strong>GPU</strong> texture each frame and samples it in a <strong>Slang</strong> fragment <strong>shader</strong> compiled to <strong>SPIR-V</strong>.</li>
             </ul>
           </div>
 
@@ -115,9 +149,9 @@
             <p>A from-scratch Pong recreation &mdash; my entry point into graphics programming, building a full game loop without an engine. Archived as-is.</p>
 
             <ul>
-              <li>2D rendering pipeline built directly on <strong>OpenGL</strong> and <strong>C++</strong>.</li>
-              <li>Manual AABB collision detection and physics calculations.</li>
-              <li>Two-player game loop and gameplay logic implemented from scratch.</li>
+              <li>2D rendering pipeline, vertex buffer setup, and shaders built directly on <strong>OpenGL</strong> and <strong>C++</strong>.</li>
+              <li>Manual <strong>AABB collision detection</strong> and physics calculations.</li>
+              <li>Two-player <strong>game loop</strong> and gameplay logic implemented from scratch.</li>
             </ul>
           </div>
         </section>
@@ -125,15 +159,16 @@
         <div class="info-columns">
           <section>
             <h2 class="section-heading">Skills</h2>
-            <p><strong>Languages:</strong> C++ (Strong), C#, Lua, Python, GLSL/Slang</p>
-            <p><strong>Engines &amp; APIs:</strong> Unreal Engine 5 (C++ &amp; Blueprints), Unity, Vulkan, OpenGL</p>
-            <p><strong>Tools:</strong> Git, Gluon, Aseprite / Pixel Art, Adobe Photoshop, DaVinci Resolve</p>
+            <p><strong>Languages:</strong> C++ (Strong), C#, Lua, Python, GLSL / Slang (SPIR-V)</p>
+            <p><strong>Engines &amp; APIs:</strong> Unreal Engine 5 / UE5 (C++ &amp; Blueprints), Unity, Vulkan, OpenGL</p>
+            <p><strong>Graphics &amp; Systems:</strong> real-time rendering, graphics pipeline, shaders, GPU memory management, RAII, low-level systems programming, framework architecture, hardware emulation</p>
+            <p><strong>Tools:</strong> Git, Gluon, CMake, Aseprite / Pixel Art, Adobe Photoshop, DaVinci Resolve</p>
           </section>
 
           <section>
             <h2 class="section-heading">Languages</h2>
             <p><strong>Portuguese:</strong> Native</p>
-            <p><strong>English:</strong> Fluent (C2-equivalent, self-assessed)</p>
+            <p><strong>English:</strong> Fluent (C2 equivalent)</p>
           </section>
         </div>
 
@@ -146,12 +181,12 @@
 
           <p class="section-label">06/2025 - 03/2026</p>
 
-          <p>Hired as a game developer; built interactive real-time systems in <strong>Unreal Engine 5</strong>, with the role expanding into architectural rendering.</p>
+          <p>Built and shipped playable real-time experiences in <strong>Unreal Engine 5</strong>, delivered to clients as games &mdash; <strong>20+ client deliveries</strong> on a team of 8+, including work for <strong>Coca-Cola</strong> and multiple <strong>COP30</strong> (UN climate summit) projects.</p>
 
           <ul>
-            <li>Programmed runtime character controllers and interactive systems, turning static scenes into playable experiences.</li>
-            <li>Built automation scripts and tools in <strong>Python</strong>, <strong>C++</strong>, and <strong>Blueprints</strong> to streamline asset integration and rendering workflows.</li>
-            <li>Co-led adoption of <strong>Git</strong> and <strong>Gluon</strong>, standardizing source control for binary assets and project data.</li>
+            <li>Programmed the <strong>character controller</strong>, <strong>input handling</strong>, and interaction systems in <strong>C++</strong> and <strong>Blueprints</strong>, then <strong>generalized them into reusable gameplay systems</strong> redeployed across subsequent projects rather than rebuilt per scene.</li>
+            <li>Built pipeline tooling in <strong>Python</strong>, <strong>C++</strong>, and <strong>Blueprints</strong> that cut recurring asset-integration and rendering tasks from <strong>~30 minutes of manual work to under 5</strong>, for the whole team.</li>
+            <li>Co-led adoption of <strong>Git</strong> and <strong>Gluon</strong> across the team, introducing version control for large binary assets and standardizing how work was branched, reviewed, and released.</li>
           </ul>
 
           <!-- ----------------------------- -->
@@ -185,17 +220,12 @@
           </ul>
 
           <h3>Technologist Diploma in Digital Games</h3>
-          <p class="section-label">UNINTER | Est. Graduation 06/2027</p>
+          <p class="section-label">UNINTER | Est. Graduation 06/2028</p>
         </section>
       </main>
     </div>
   </div>
 
-  <script>
-    window.onload = function () {
-      window.print();
-    };
-  </script>
 </body>
 
 </html>

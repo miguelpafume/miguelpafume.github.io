@@ -16,6 +16,14 @@
   --skill-bar-border: #941AFF;
 
   --spacing-inline: 0.5rem;
+
+  /* Seam between the header/footer bars and the content surface. Plain #ccc
+     reads as a hard white line against #141414 / #1F1F1F. */
+  --divider-color: rgba(245, 245, 245, 0.09);
+
+  /* One vertical rhythm shared by every top-level section, so content never
+     butts up against the header or the footer. */
+  --section-padding-block: clamp(1.5rem, 4vw, 3rem);
 }
 
 button {
@@ -202,14 +210,22 @@ button:hover {
 }
 
 .home-skill img {
-  max-width: auto; /* Set logo size */
+  width: auto; /* `max-width: auto` is not valid CSS; width:auto keeps the ratio */
   height: 40px; /* Set logo size */
   margin-right: 10px; /* Space between logo and text */
 }
 
 section {
-  display: none;
   background: var(--background-color);
+}
+
+/*
+  The router in js/app.js reveals one section at a time. Scoping the hiding to
+  .js (set by an inline script in <head>) means that without JS the page
+  degrades to every section stacked, instead of rendering blank.
+*/
+.js section {
+  display: none;
 }
 
 /* 
@@ -244,11 +260,23 @@ section {
   height: 100vh;
 	width: 100%;
   overflow-y: scroll;
+  overscroll-behavior-y: none; /* no rubber-banding past the header/footer */
 }
 
 /* 
 BASE STYLES
 */
+/*
+  .wrapper is the scroll container, so the page canvas behind it is what an
+  elastic overscroll reveals. Left transparent it shows the browser's white
+  default as a band above the header and below the footer; painting it the bar
+  colour makes the revealed strip continuous with whichever bar it sits behind.
+*/
+html,
+body {
+  background-color: var(--header-footer-bg-color);
+}
+
 body {
   margin: 0;
   overflow: hidden;
@@ -343,15 +371,87 @@ footer {
   text-align: center;
 }
 
+/* .page-footer opts out via .footer-inner below — see the two-column rules. */
+
 /*
   #FOOTER#
 */
 
+/*
+  Two columns so the footer stays short: the pitch and the legal line sit left,
+  the contact routes right. Collapses to a centered stack on narrow screens.
+*/
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1.25rem;
+  text-align: left;
+}
+
+.footer-left {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.footer-availability {
+  margin: 0 0 0.25rem;
+  max-width: 52ch;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.footer-availability strong {
+  color: var(--link-color);
+}
+
+.footer-legal {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.footer-email {
+  font-size: 0.95rem;
+}
+
 .footer-logos {
   display: flex;
-  justify-content: center; /* Center the logos */
-  gap: 1rem; /* Space between logos */
-  margin-top: 1rem; /* Space above the logos */
+  gap: 1rem;
+  margin: 0;
+}
+
+/* Narrow screens: one centered stack, since two columns would each be a sliver. */
+@media (max-width: 40rem) {
+  .footer-inner {
+    justify-content: center;
+    text-align: center;
+    /* The container runs full-bleed at this width, so keep text off the edges. */
+    padding-inline: 1rem;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: 1 1 100%;
+    align-items: center;
+  }
+
+  .footer-availability {
+    margin-inline: auto;
+  }
+
+  .footer-logos {
+    justify-content: center;
+  }
 }
 
 .footer-logo {
@@ -401,8 +501,21 @@ footer {
   z-index: 2;
 }
 
+/*
+  Every top-level section breathes on the same rhythm. #projects already set
+  its own padding; these bring #home and #resume in line with it.
+*/
+#home > .container,
+#resume > .container {
+  padding-block: var(--section-padding-block);
+}
+
+#resume .page-content > .container {
+  padding-block-end: var(--section-padding-block);
+}
+
 .page-header {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--divider-color);
 }
 
 .page-header .container {
@@ -456,7 +569,7 @@ footer {
 }
 
 .page-footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--divider-color);
 }
 
 .section-heading {
@@ -561,34 +674,6 @@ aside li {
 }
 
 /* Skillbars */
-.soft-skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem 0;
-}
-
-.soft-skill-tag {
-  display: inline-block;
-  background-color: var(--skill-bar-fill-color);
-  color: var(--skill-bar-font);
-  padding: 0.25rem 0.75rem;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border: 1px solid var(--skill-bar-border);
-  white-space: nowrap;
-  z-index: 2;
-}
-
-.soft-skill-tag:hover {
-  background-color: var(--link-color-hover);
-  color: var(--font-color);
-  cursor: default;
-  z-index: 2;
-  transition: transform 0.3s;
-}
-
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -623,7 +708,7 @@ aside li {
 
 .page-content .container.projects-container {
   display: block;
-  padding: 2rem 1rem 3rem;
+  padding: var(--section-padding-block) 1rem;
 }
 
 .projects-intro {

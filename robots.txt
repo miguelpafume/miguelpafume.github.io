@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /cover.html
+
+Sitemap: https://miguelpafume.github.io/sitemap.xml
